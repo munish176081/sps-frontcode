@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
@@ -44,6 +45,8 @@ export default function Home() {
               <Link href="/contact" className="btn btn-outline-secondary">
                 Contact Us
               </Link>
+              <Button label="About Us" href="/about" />
+              <Button label="Get Quote" href="/get-quote" variant="secondary" />
             </div>
           </div>
         </div>

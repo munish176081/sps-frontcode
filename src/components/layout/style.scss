@@ -1,0 +1,81 @@
+@use "@/styles/variables" as *;
+@use "@/styles/flexbox" as *;
+
+.header {
+    background: $white;
+    border-bottom: 1px solid rgba($black, .10); 
+    @media (min-width:1200px){
+        padding: 20px 0;
+    }
+    @media (max-width:1199.99px){
+        padding: 12px 0;
+    }
+    .navbar { 
+        @media (max-width: 820px){
+            display: none; 
+            &.open {
+                @include flexbox(); 
+                @include flex-direction (column);
+                position: absolute;
+                top:calc(100% + 1px);
+                left: 0;
+                width: 100%;                
+                background-color: $grey-color-400;
+                box-shadow: 0 0 5px rgba($black, .20);
+                z-index: 11; 
+            }
+        }
+        .nav {
+            gap: 15px;
+            @media (min-width: 1200px){
+                gap: 120px;
+            }
+            @media (min-width: 820px) and (max-width: 1199.99px){
+                gap: 50px;
+            }
+            @media (max-width: 575px){
+                width: 100%;
+                padding: 10px 15px;
+                @include flex-direction (column);
+            }
+            li {
+                a {
+                     @media (min-width: 1200px){
+                        font-size: 22px;
+                    }
+                    @media (max-width: 1199.99px){
+                        font-size: 18px;
+                    }
+                }
+            }
+        } 
+    }
+    @at-root .logo {
+        img {
+            height: auto;
+            @media (min-width: 820px){
+               width: 172px;
+            }
+           @media (max-width: 819.99px){
+                 width: 110px;
+            }
+        }
+    }
+}
+
+.menu-toggle {
+    display: none;
+    gap: 5px;
+    border: none;    
+    background: none;
+    @media (max-width: 819.99px) {       
+        @include flexbox();
+        flex-direction: column;
+    }
+    span {
+        width: 24px;
+        height: 2px;
+        border-radius: 5px;
+        background: $black;
+    }
+}

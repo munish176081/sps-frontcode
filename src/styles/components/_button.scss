@@ -1,0 +1,101 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixin" as *;
+@use "@/styles/flexbox" as *; 
+
+.btn {
+    @include inline-flex-center;
+    gap: 8px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1; 
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+    &:disabled,
+    &.is-disabled {
+        opacity: .6;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+/* ===========================
+   Sizes
+=========================== */
+.btn {
+    &-sm {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    &-md {
+        padding: 16px 20px;
+        font-size: 13.59px;
+        min-width: 224px;
+        @media (min-width: 1200px) {
+            font-size: 22px;
+        }
+    }
+    &-lg {
+        padding: 20px 26px;
+        font-size: 18px;
+    }
+    &-full {
+        padding: 14px 22px;
+        width: 100%;
+    }
+    &-rounded-full{
+        @include border-radius (35px);
+    }
+}
+
+.btn-white {
+    background: $white;
+    color: $brand-primary;
+    border-color: $white;
+    &:hover {
+        color: $white;
+        background: $black;
+        border-color: rgba($white, 6%);
+        text-decoration: none;
+        .icon {
+            svg {
+                path {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+}
+
+.btn-black {
+    background: $black;
+    color: $white;
+    border-color: $black;
+    &:hover {
+        background: rgba($black, 6%);
+        border-color: rgba($black, 6%);
+        .icon {
+            svg {
+                path {
+                    stroke: $black;
+                }
+            }
+        }
+    }
+}
+
+.btn-outline {
+    background: transparent;
+    color: $white;
+    border-color: $white;
+    &:hover {
+        background: rgba($white, .08);
+    }
+}
+
+.icon-verticle {
+    .icon {
+        transform: rotate(-90deg);
+    }
+}

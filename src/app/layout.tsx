@@ -27,6 +27,16 @@ const ztNature = localFont({
       weight: '500',
       style: 'normal',
     },
+    {
+      path: '../../public/fonts/ZTNature-Light.woff',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/ZTNature-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
   ],
   variable: '--font-zt-nature',
   display: 'swap',

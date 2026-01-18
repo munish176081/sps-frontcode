@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"; 
 import './heroblock.scss';
 import Button from "@/components/ui/Button";
 
@@ -42,7 +41,7 @@ export const HeroBlock = () => {
 
                 <div className="position-relative hero_block">
                   <Image src="/home/hero-pic2.webp" alt="" width={718} height={526} className="w-100" />
-                  <Button rounded size="md" label="Get Quote" href="#" variant="white" className="icon-verticle" />
+                  <Button rounded size="md" label="Get Quote" href="#" variant="white" className="icon-verticle d-md-none" />
                 </div>
               </div>
 
@@ -56,9 +55,8 @@ export const HeroBlock = () => {
             </div>
 
           </div>
-
+          
         </div>
-
       </section>
     </>
   );

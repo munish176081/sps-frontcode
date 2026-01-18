@@ -79,3 +79,120 @@
         background: $black;
     }
 }
+
+// Footer
+.footer {
+    .btn {
+        @media (max-width: 767px) {       
+            width: 100%;
+        }
+    }
+}
+.icon-dot {
+    position: relative;
+    &::before {
+        content: '';
+        background-color: $brand-primary;
+        border-radius: 8px;
+        margin-right: 5px;
+        width: 16px;
+        height: 16px;
+    }
+    .icon {
+        display: none;
+    }
+}
+
+.f_group_col{ 
+    display: inline-block;
+    color: $grey-color-700;
+}
+.footer-contact {
+    .row {
+        @media (max-width: 767px) {
+            gap: 32px;
+        }
+    }
+    @media (min-width: 1200px) {
+        margin-top: 155px;
+        margin-bottom: 40px;
+    }
+    small {
+        color: $grey-color-700;
+        font-size: 10px;
+    }
+    a {
+        color: $grey-color-800;
+    }
+    span {
+        font-size: 14px;
+        color: $grey-color-800;
+    }
+}
+
+.footer-menu {
+    li {
+        a {
+            color: $white;
+            @media (min-width: 1200.99px) {
+                font-size: 22px;
+            }
+            @media (max-width: 1200px) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.footer-btm {
+    @media (max-width: 767px) {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    a, span {
+        color: #FCFBF2;
+        font-size: 12px;
+    }
+}
+.f_bottom_group {
+    width: 100%;
+    @media (min-width: 992px) {
+        margin-left: auto;
+        max-width: 88%;
+    }
+}
+.contact_group {
+    gap: 5px
+}
+.social-icons {
+    @media (max-width: 991px) {
+        margin-top: 48px;
+    }
+}
+
+.footer-desc {
+    font-size: 24px;
+    @media (min-width: 992px) {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 24px;
+    }
+}
+
+.back-top {
+  margin-left: auto;
+  margin-bottom: 30px;
+  width: 100px;
+  height: 100px;
+  @include flexbox;
+  border-radius: 50%;
+  border: 1px solid rgba($white, 0.4); 
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease-in-out;
+  &:hover {
+    border-color: $white;
+  }
+}

@@ -1,0 +1,31 @@
+.logo-marquee {
+  width: 100%;
+  overflow: hidden; 
+  padding: 32px 0 0; 
+  @media (min-width: 1300px) {
+    padding-top: 50px;
+  }
+}
+
+.logo-track { 
+  display: flex;
+  width: max-content;
+  position: relative; 
+  left: 0;
+  @media (min-width: 1300px) {
+    gap: 140px;
+  }
+  @media (max-width: 1299px) {
+    gap: 100px;
+  }
+}
+
+.logo-item {
+  flex: 0 0 auto;  
+}
+
+.logo-item img {
+  height: 40px;
+  width: auto;  
+  display: block;
+}

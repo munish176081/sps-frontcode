@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"; 
 import './heroblock.scss';
 import Button from "@/components/ui/Button";
 
@@ -22,15 +21,15 @@ export const HeroBlock = () => {
                   <div className="w-100 d-flex justify-content-between">
                     <div className="d-flex hero-info">
                       <div className="col-6">
-                        <p>UNITED STATES</p>
-                        <p>02 : 11 : 49</p>
-                        <p>+1 484 224 2972</p>
+                        <span>UNITED STATES</span>
+                        <span>02 : 11 : 49</span>
+                        <span>+1 484 224 2972</span>
                       </div>
 
                       <div className="col-6">
-                        <p>SINGAPORE</p>
-                        <p>15 : 11 : 49</p>
-                        <p>+65 6383 3788</p>
+                        <span>SINGAPORE</span>
+                        <span>15 : 11 : 49</span>
+                        <span>+65 6383 3788</span>
                       </div>
                     </div>
 
@@ -42,7 +41,7 @@ export const HeroBlock = () => {
 
                 <div className="position-relative hero_block">
                   <Image src="/home/hero-pic2.webp" alt="" width={718} height={526} className="w-100" />
-                  <Button rounded size="md" label="Get Quote" href="#" variant="white" className="icon-verticle" />
+                  <Button rounded size="md" label="Get Quote" href="#" variant="white" className="icon-verticle d-md-none" />
                 </div>
               </div>
 
@@ -56,9 +55,8 @@ export const HeroBlock = () => {
             </div>
 
           </div>
-
+          
         </div>
-
       </section>
     </>
   );

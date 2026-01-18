@@ -88,8 +88,8 @@ export default function WhatWeOfferSection() {
                                 </span>
                                 <em className="ms-2">
                                     <svg width="78" height="78" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M41.8691 22.5452H54.752V35.4281" stroke="black" strokeWidth="3" stroke-linecap="round" strokeLinejoin="round" />
-                                        <path d="M22.5449 54.7522L54.7522 22.545" stroke="black" strokeWidth="3" stroke-linecap="round" strokeLinejoin="round" />
+                                        <path d="M41.8691 22.5452H54.752V35.4281" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M22.5449 54.7522L54.7522 22.545" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </em>
                             </div>

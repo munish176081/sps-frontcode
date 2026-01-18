@@ -21,15 +21,15 @@ export const HeroBlock = () => {
                   <div className="w-100 d-flex justify-content-between">
                     <div className="d-flex hero-info">
                       <div className="col-6">
-                        <p>UNITED STATES</p>
-                        <p>02 : 11 : 49</p>
-                        <p>+1 484 224 2972</p>
+                        <span>UNITED STATES</span>
+                        <span>02 : 11 : 49</span>
+                        <span>+1 484 224 2972</span>
                       </div>
 
                       <div className="col-6">
-                        <p>SINGAPORE</p>
-                        <p>15 : 11 : 49</p>
-                        <p>+65 6383 3788</p>
+                        <span>SINGAPORE</span>
+                        <span>15 : 11 : 49</span>
+                        <span>+65 6383 3788</span>
                       </div>
                     </div>
 

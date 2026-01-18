@@ -38,8 +38,10 @@
     }
 }
 
-.hero-info p {
+.hero-info span {
     margin: 2px 0; 
+    display: block;
+    color: #0E0E0E;
 }
 
 .est {
@@ -47,7 +49,7 @@
     p {
         font-weight: 500;
         margin: 0;
-        font-size: 21px;
+        font-size: 21.6px;
         @media (max-width: 1200px) { 
             font-size: 18px;
         }

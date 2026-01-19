@@ -1,0 +1,96 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixin" as *;
+@use "@/styles/flexbox" as *;
+@use "@/styles/components/button" as *; 
+
+.testimonial-section {
+  padding: 100px 0; 
+  @media (max-width: 767px) {
+    padding: 48px 0; 
+  }
+  .swiper {
+    @media (max-width: 767px) {
+        overflow: unset;
+    }
+  }
+  @at-root {
+    .header-desc {
+        font-size: 18px;
+        color: $text-color;
+        max-width: 600px;
+        margin-left: auto;
+        @media (max-width: 767px) {
+        font-size: 14px;
+        }
+    }
+  }
+}
+
+.testimonial-card {
+  border: 1px solid rgba($black,.10);
+  @include opacity (0.50);
+  padding: 32px 28px 0;
+  background: $white;
+  height: 100%;
+  @include flexbox;
+  @include flex-direction (column);
+  @include justify-content (space-between);
+  transition: all 0.35s ease;
+  .swiper-slide-active & { 
+    @include opacity(1); 
+  }
+} 
+ 
+.stars {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: $brand-primary;
+}
+
+.quote {  
+  margin-bottom: 16px;
+  img {
+    width: 73px;
+    height: auto;
+    @media (max-width: 767px) {
+        width: 49px;
+    }
+  }
+}
+
+.text {
+  font-size: 19px;
+  color: rgba($black,.7);
+  margin-bottom: 32px;
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
+}
+ 
+/* AUTHOR BAR */
+.author {
+  background: $brand-primary;
+  color: $white;
+  padding: 40px; 
+  margin: 0 -30px;
+  text-align: center;
+  transition: background 0.3s ease;
+  @media (max-width: 767px) {
+     padding: 25px; 
+  }
+}
+
+.author span {
+  display: block;
+  font-size: 22px;
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
+}
+
+.author small {
+  font-size: 14px; 
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+}

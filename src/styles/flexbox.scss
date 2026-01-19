@@ -15,6 +15,14 @@
   justify-content: center;
 }
 
+// Flex center mixin
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
 // The 'flex' shorthand
 // - applies to: flex items
 // <positive-number>, initial, auto, or none

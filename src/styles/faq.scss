@@ -14,9 +14,9 @@
 .faq-accordion {
     .accordion-item {
         border: none;
-        border-top: 1px solid $grey-color-900;
+        border-top: 1px solid $grey-color-500;
         &:last-child {            
-            border-bottom: 1px solid $grey-color-900;
+            border-bottom: 1px solid $grey-color-500;
         }
     }
     .accordion-button {

@@ -37,7 +37,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
     return (
-        <section className="testimonial-section">
+        <section className="testimonial-section overflow-hidden">
             <div className="container">
                 
                 <div className="row mb-4 mb-md-5 align-items-end">

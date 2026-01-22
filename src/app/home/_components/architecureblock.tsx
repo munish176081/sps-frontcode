@@ -25,7 +25,7 @@ export const ArchitecureBlock = () => {
               Splendour in Stone Has Been Featured By Australia’s Top Architecture
               And Design Publications.
             </h2>
-            <Button rounded size="md" label="Get a sample" href="#" variant="white" className="icon-verticle" />
+            <Button rounded size="md" label="Get a sample" href="#" variant="white" />
           </div>
         </div>
       </div>

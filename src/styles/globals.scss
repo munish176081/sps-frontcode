@@ -52,6 +52,9 @@ img {
   margin: 0 auto;
   max-width: 1464px;
   padding-inline: 15px;
+  @media (min-width: 1400px) {
+     max-width: 90%;
+  }
 }
 
 .hx1 {

@@ -12,13 +12,13 @@ export const HeroBlock = () => {
             <div className="col-md-6 mb-3">
 
               <div className="d-flex flex-column justify-content-between h-100">
-                <div className="d-flex flex-column justify-content-between hero-text h-100">
-                  <h1 className="h2">
+                <div className="d-flex flex-column justify-content-between hero-text">
+                  <h1 className="h2 mb-md-5 mb-0">
                     Natural Stone.<br />
                     Pure Craft.
                   </h1>
 
-                  <div className="w-100 d-flex justify-content-between">
+                  <div className="mt-md-5 mt-4 w-100 d-flex justify-content-between">
                     <div className="d-flex hero-info">
                       <div className="col-6">
                         <span>UNITED STATES</span>

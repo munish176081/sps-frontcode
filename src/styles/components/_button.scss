@@ -53,12 +53,17 @@
     background: $white;
     color: $brand-primary;
     border-color: $white;
+    .icon {
+        transition: all .5s ease-in-out;
+    }
     &:hover {
         color: $white;
         background: $black;
         border-color: rgba($white, 6%);
         text-decoration: none;
         .icon {
+            transform: rotate(-90deg);
+            transform-origin: center center;
             svg {
                 path {
                     stroke: $white;

@@ -39,7 +39,7 @@ export const HeroBlock = () => {
                   </div>
                 </div>
 
-                <div className="position-relative hero_block">
+                <div className="position-relative hero_block overflow-hidden">
                   <Image src="/home/hero-pic2.webp" alt="" width={718} height={526} className="w-100" />
                   <Button rounded size="md" label="Get Quote" href="#" variant="white" className="icon-verticle d-md-none" />
                 </div>
@@ -48,7 +48,7 @@ export const HeroBlock = () => {
             </div>
 
             <div className="col-md-6 mb-3">
-              <div className="position-relative hero_block">
+              <div className="position-relative hero_block overflow-hidden">
                 <Image src="/home/hero-pic1.webp" alt="" width={720} height={839} className="w-100" />
                 <Button rounded size="md" label="View services" href="#" variant="white" />
               </div>

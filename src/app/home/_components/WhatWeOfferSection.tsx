@@ -17,7 +17,7 @@ export default function WhatWeOfferSection() {
                 <div className="row g-4">
                     {/* Walling */}
                     <div className="col-6 col-md-4 col-lg-3 d-none d-md-block">
-                        <Link href="#" className="h6 mb-3 d-block">Walling</Link>
+                        <Link href="#" className="h5 mb-3 d-block">Walling</Link>
                         <Image
                             src="/home/what-we-offer/offer1.webp"
                             alt="Walling"
@@ -29,7 +29,7 @@ export default function WhatWeOfferSection() {
 
                     {/* Paving */}
                     <div className="col-6 col-md-4 col-lg-3 d-none d-md-block">
-                        <Link href="#" className="h6 mb-3 d-block">Paving</Link>
+                        <Link href="#" className="h5 mb-3 d-block">Paving</Link>
                         <Image
                             src="/home/what-we-offer/offer2.webp"
                             alt="Walling"
@@ -41,7 +41,7 @@ export default function WhatWeOfferSection() {
 
                     {/* Cobblestone */}
                     <div className="col-6 col-md-4 col-lg-3 d-none d-md-block">
-                        <Link href="#" className="h6 mb-3 d-block">Cobblestone</Link>
+                        <Link href="#" className="h5 mb-3 d-block">Cobblestone</Link>
                         <Image
                             src="/home/what-we-offer/offer3.webp"
                             alt="Walling"
@@ -53,7 +53,7 @@ export default function WhatWeOfferSection() {
 
                     {/* Bricks */}
                     <div className="col-6 col-md-4 col-lg-3 d-none d-md-block">
-                        <Link href="#" className="h6 mb-3 d-block">Bricks</Link>
+                        <Link href="#" className="h5 mb-3 d-block">Bricks</Link>
                         <Image
                             src="/home/what-we-offer/offer4.webp"
                             alt="Walling"
@@ -65,7 +65,7 @@ export default function WhatWeOfferSection() {
 
                     {/* Marbleroom */}
                     <div className="col-6 col-md-4 col-lg-3">
-                        <Link href="#" className="h6 mb-3 d-block">Marbleroom</Link>
+                        <Link href="#" className="h5 mb-3 d-block">Marbleroom</Link>
                         <Image
                             src="/home/what-we-offer/offer5.webp"
                             alt="Walling"
@@ -77,7 +77,7 @@ export default function WhatWeOfferSection() {
 
                     {/* View All Collections */}
                     <div className="col-6 col-md-4 col-lg-3 d-flex flex-column align-items-end view-collection-box">
-                        <Link href="#" className="h6 mb-3 d-block">&nbsp;</Link>
+                        <Link href="#" className="h5 mb-3 d-block">&nbsp;</Link>
                         <Link
                             href="#"
                             className="border w-100 h-100 p-3 grey-box d-flex flex-column justify-content-end"

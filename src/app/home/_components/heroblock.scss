@@ -41,7 +41,7 @@
 .hero-info span {
     margin: 2px 0; 
     display: block;
-    color: #0E0E0E;
+    color: $base-color;
 }
 
 .est {
@@ -70,8 +70,12 @@
     }
     img {
         object-fit: cover;
+        transition: all .5s ease-in-out;
         @media (max-width: 767px){
             max-height: 413px;
+        }
+        &:hover{
+            transform: scale(1.15);
         }
     }
 }

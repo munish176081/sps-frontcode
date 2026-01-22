@@ -1,9 +1,11 @@
 import type { Metadata } from "next"; 
 import localFont from 'next/font/local';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/styles/globals.scss';
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FaqSection from "@/components/ui/FaqSection";
+import '@/styles/globals.scss';
+import '@/styles/faq.scss';
 
 const ztNature = localFont({
   src: [
@@ -57,6 +59,7 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
+        <FaqSection />
         <Footer />
       </body>
     </html>

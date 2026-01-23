@@ -46,7 +46,7 @@ const ztNature = localFont({
 
 export const metadata: Metadata = {
   title: "Wall Cladding Melbourne | Stone Cladding | Splendour in Stone",
-  description: "Melbourne's Splendour in Stone completely transforms the look &amp; feel of ageing walls with our stone wall cladding products. Explore our beautiful range today!",
+  description: "Melbourne's Splendour in Stone completely transforms the look & feel of ageing walls with our stone wall cladding products. Explore our beautiful range today!",
 };
 
 export default function RootLayout({

@@ -39,12 +39,30 @@
                 @include flex-direction (column);
             }
             li {
+                position: relative;
                 a {
-                     @media (min-width: 1200px){
+                    @media (min-width: 1200px){
                         font-size: 22px;
                     }
                     @media (max-width: 1199.99px){
                         font-size: 18px;
+                    }
+                    &.menu-dropdown {
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                            vertical-align: middle;
+                            margin-left: 7px;
+                            transform: rotate(135deg);
+                            transition: all .5s ease-in-out;
+                        }
+                    }
+                    &:hover{
+                        &.menu-dropdown {
+                            svg {                                
+                                transform: rotate(0deg);
+                            }
+                        }
                     }
                 }
             }

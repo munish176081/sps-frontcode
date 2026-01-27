@@ -33,12 +33,15 @@
         font-size: 14px;
         min-width: 224px;
         @media (min-width: 1200px) {
-            font-size: 22px;
+            font-size: 20px;
         }
     }
     &-lg {
         padding: 20px 26px;
-        font-size: 18px;
+        font-size: 16px;
+        @media (min-width: 1200px) {
+            font-size: 18px;
+        }
     }
     &-full {
         padding: 14px 22px;

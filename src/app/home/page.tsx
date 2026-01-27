@@ -5,6 +5,7 @@ import WhatWeOfferSection from "./_components/WhatWeOfferSection";
 import StoneValuesSection from "./_components/StoneValuesSection";
 import TestimonialSection from "./_components/TestimonialSection";
 import CollectionsSection from "./_components/CollectionsSection";
+import Gallery from "./_components/gallery";
 import './home.scss'
 
 export default function HomePage() {
@@ -15,11 +16,9 @@ export default function HomePage() {
       <BuiltForLifetimeSection />
       <WhatWeOfferSection />
       <StoneValuesSection />
+      <Gallery />
       <CollectionsSection />
-      <TestimonialSection />
-      
-      {/* <Button label="About Us" href="/about" />  */}
-
+      <TestimonialSection /> 
     </>
   );
 }

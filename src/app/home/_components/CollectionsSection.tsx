@@ -57,7 +57,7 @@ export default function CollectionsSection() {
               slidesPerView={2.5}
               loop
               autoplay={{
-                delay: 104500,
+                delay: 4500,
                 disableOnInteraction: false,
               }}
               breakpoints={{

@@ -18,7 +18,13 @@ export default function Header() {
 
         <nav className={`navbar ${open ? 'open' : ''}`}>
           <ul className="nav">
-            <li><Link href="/products" onClick={() => setOpen(false)}>Products</Link></li>
+            <li>
+              <Link href="/products" onClick={() => setOpen(false)} className="menu-dropdown">Products
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 13.5v-11m0 0L3.5 7M8 2.5 12.5 7" stroke="currentColor" strokeWidth=".8" strokeLinejoin="bevel"></path>
+                </svg>
+              </Link>
+            </li>
             <li><Link href="/about" onClick={() => setOpen(false)}>About</Link></li>
             <li><Link href="/gallery" onClick={() => setOpen(false)}>Gallery</Link></li>
             <li><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
@@ -34,7 +40,7 @@ export default function Header() {
           <span />
           <span />
         </button>
-      </div> 
+      </div>
     </header>
   );
 }

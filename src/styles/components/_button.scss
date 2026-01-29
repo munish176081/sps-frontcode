@@ -50,6 +50,20 @@
     &-rounded-full{
         @include border-radius (35px);
     }
+    .icon {
+        transition: all .5s ease-in-out;
+    }
+    &:hover {
+        .icon {
+            transform: rotate(-90deg);
+            transform-origin: center center;
+            svg {
+                path {
+                    stroke: $white;
+                }
+            }
+        }
+    }
 }
 
 .btn-white {
@@ -81,8 +95,7 @@
     color: $white;
     border-color: $black;
     .icon {
-        svg {
-            transition: all .5s ease-in-out;
+        svg { 
             path {
                 stroke: $white;
             }
@@ -94,8 +107,6 @@
         text-decoration: none;
         .icon {
             svg {
-                transform: rotate(-130deg);
-                transform-origin: center center;
                 path {
                     stroke: $black;
                 }

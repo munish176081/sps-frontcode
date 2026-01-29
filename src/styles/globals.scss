@@ -26,6 +26,16 @@ a {
     text-decoration: underline;
   }
 }
+label {
+  font-size: 18px;
+  color: $black;
+  @media (min-width: 767.99px) {
+    font-size: 20px;
+  }
+  @media (min-width: 991.99px) {
+    font-size: 24px;
+  }
+}
 p { 
   font-size: 14px;
   color: $text-color;
@@ -74,7 +84,7 @@ img {
 }
 .h1 {
   @media (min-width: 1200px) {
-    font-size: 72px;
+    font-size: 70px;
   }
   @media (min-width: 767.99px) and (max-width: 1199.99px) {
     font-size: 52px;

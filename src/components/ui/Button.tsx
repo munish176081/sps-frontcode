@@ -47,7 +47,7 @@ export default function Button({
       <em className="icon">
         <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M17 1L21 5L17 9" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M1 5H21" stroke="black" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" />
+          <path d="M1 5H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </em>
     </button>

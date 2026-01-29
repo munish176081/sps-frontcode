@@ -3,8 +3,6 @@
 @use "@/styles/flexbox" as *; 
 @use "@/styles/components/button" as *; 
 
-.grey-box { background-color: $grey-color-400;}
-
 html, body {
   -webkit-font-smoothing: antialiased;   
   -moz-osx-font-smoothing: grayscale;  
@@ -133,7 +131,7 @@ hr {
 }
 
 // Common SCSS
-
+.grey-box { background-color: $grey-color-400;}
 .bg-green {
   background-color: $brand-primary;
 }

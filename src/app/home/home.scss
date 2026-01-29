@@ -3,10 +3,6 @@
 @use "@/styles/flexbox" as *;
 @use "@/styles/components/button" as *;
 
-.bg-green {
-    background-color: $brand-primary;
-}
-
 .architecure-row {
     grid-template-columns: 1.3fr 1fr;
     gap: 60px;
@@ -22,31 +18,6 @@
     }
     img {
         height: auto;
-    }
-}
-.badge-text {
-    position: relative;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 30px;
-    line-height: 1;
-    @media (max-width: 768px) {
-        margin-bottom: 12px;
-    }
-    &::before {
-        content: '';
-        background-color: $white;
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        border-radius: 10px;
-        margin-right: 10px;
-        vertical-align: middle;
-    }
-    &.badge-primary {
-        &::before {
-            background-color: $brand-primary;
-        }
     }
 }
 .stone-content {

@@ -27,7 +27,7 @@ const ztNature = localFont({
     {
       path: '../../public/fonts/ZTNature-Medium.woff2',
       weight: '500',
-      style: 'normal',
+      style: 'normal',  
     },
     {
       path: '../../public/fonts/ZTNature-Light.woff',
@@ -58,8 +58,7 @@ export default function RootLayout({
     <html lang="en" className={ztNature.variable}>
       <body>
         <Header />
-        <main>{children}</main>
-        <FaqSection />
+        <main>{children}</main> 
         <Footer />
       </body>
     </html>

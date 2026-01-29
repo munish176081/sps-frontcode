@@ -1,8 +1,14 @@
+import PageHeader from '@/components/ui/PageHeader';
+import './style.scss';
+
 export default function ContactPage() {
   return (
-    <div className="container py-5">
-      <h1>Contact</h1>
-      <p>This is the Contact page.</p>
-    </div>
+    <>
+      <PageHeader
+        title="Contact Us"
+      />
+
+     
+    </>
   );
 }

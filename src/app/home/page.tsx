@@ -7,6 +7,7 @@ import TestimonialSection from "./_components/TestimonialSection";
 import CollectionsSection from "./_components/CollectionsSection";
 import Gallery from "./_components/gallery";
 import './home.scss'
+import FaqSection from "@/components/ui/FaqSection";
 
 export default function HomePage() {
   return (
@@ -18,7 +19,8 @@ export default function HomePage() {
       <StoneValuesSection />
       <Gallery />
       <CollectionsSection />
-      <TestimonialSection /> 
+      <TestimonialSection />
+      <FaqSection />
     </>
   );
 }

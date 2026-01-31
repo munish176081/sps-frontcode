@@ -11,7 +11,7 @@ export default function PageHeader({
 }: PageHeaderProps) {
     return (
         <>
-            <section className="page-header pt-3 pt-md-4 pb-md-3 pb-2">
+            <section className="page-header pt-3 pt-md-4 pb-md-3 pb-0">
                 <div className="container">
                     <div className="row align-items-start g-3">
 

@@ -1,0 +1,127 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixin" as *;
+@use "@/styles/flexbox" as *;
+@use "@/styles/components/button" as *;
+
+.search_box {
+    .search-icon {
+        position: absolute;
+        left: 20px;
+        top: calc(50% - 30px/2);
+        display: inline-block;
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .form-control {
+        border-radius: 0;
+        padding-left: 48px;
+        @media (min-width: 992px) {
+            height: 60px;
+        }
+        @media (max-width: 992px) { 
+            height: 50px;
+        }
+        &:hover, &:focus {
+            border-color: $brand-primary;
+            box-shadow: 0 0 10px rgba($brand-primary,.15);
+        }
+    }
+}  
+
+.blog-buttons {
+    overflow-x: auto;
+    padding-block: 15px;
+}
+.blog-categories {
+    &::before, &::after {
+        content: '';
+        height: 100%;
+        width: 185px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        @media (max-width: 767px) {
+            width: 100px;
+        }
+    }
+    &::before {
+        background: linear-gradient(90deg, $white 0%, rgba(255, 255, 255, 0) 100%);
+        left: 0;
+    }
+    &::after {
+        right: 0;
+        background: linear-gradient(-90deg, $white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+} 
+
+.blog-list {
+    .col-md-6 {
+        border-bottom: 1px solid $grey-color-500;
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        @media (max-width: 767px) {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+        &:nth-last-of-type(1), &:nth-last-of-type(2) {
+            border-bottom: 0;
+            padding-bottom: 0rem;
+            margin-bottom: 0rem;
+        }
+    }
+}
+.blog-items {
+    figure {
+        overflow: hidden;
+        img {            
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    p {
+        &:nth-last-of-type(1) {
+            margin-bottom: 0
+        }
+    }
+}
+
+.blog-content {
+    .h3 {
+        a {
+            color: inherit;
+        }
+    }
+}
+.pagination {
+    .page-item {
+        .page-link {
+            @include flex-center;
+            border-radius: 50%!important;
+            width: 36px;
+            height: 36px;
+            color: $black;
+        }
+       &.active .page-link, &:hover:not(.disabled) .page-link {
+            background: $brand-primary;
+            border-color: $brand-primary;
+            color: $white;
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }   
+    .dot {
+        width: 6px;
+        height: 6px;
+        background: $brand-primary;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}

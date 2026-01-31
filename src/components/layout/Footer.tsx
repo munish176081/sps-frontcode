@@ -27,16 +27,16 @@ export default function Footer() {
                   <Link href="/services" className="footer-link">Services</Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/about" className="footer-link">About</a>
+                  <Link href="/about" className="footer-link">About</Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/gallery" className="footer-link">Gallery</a>
+                  <Link href="/gallery" className="footer-link">Gallery</Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/blog" className="footer-link">Blogs</a>
+                  <Link href="/blog" className="footer-link">Blogs</Link>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/contact" className="footer-link">Contact</a>
+                  <Link href="/contact" className="footer-link">Contact</Link>
                 </li>
               </ul>
 

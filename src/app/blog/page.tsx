@@ -158,7 +158,7 @@ export default function BlogPage() {
                           alt={post.title}
                           width={700}
                           height={460}
-                          className="w-100"
+                          className="w-100 h-auto"
                         />
                       </Link>
                     </figure>

@@ -24,19 +24,19 @@ export default function Footer() {
               {/* NAV */}
               <ul className="d-flex flex-column flex-md-row gap-4 list-inline mb-md-4 mb-5 footer-menu">
                 <li className="list-inline-item">
-                  <Link href="#" className="footer-link">Services</Link>
+                  <Link href="/services" className="footer-link">Services</Link>
                 </li>
                 <li className="list-inline-item">
                   <a href="/about" className="footer-link">About</a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="#" className="footer-link">Gallery</a>
+                  <a href="/gallery" className="footer-link">Gallery</a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="/blogs" className="footer-link">Blogs</a>
+                  <a href="/blog" className="footer-link">Blogs</a>
                 </li>
                 <li className="list-inline-item">
-                  <a href="#" className="footer-link">Contact</a>
+                  <a href="/contact" className="footer-link">Contact</a>
                 </li>
               </ul>
 

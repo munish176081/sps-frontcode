@@ -125,3 +125,14 @@
         display: inline-block;
     }
 }
+
+ 
+.blog-detail {
+    .border {
+        .h3 {
+            @media (min-width: 1400px) {
+                max-width: 75%;
+            }
+        }
+    }
+}

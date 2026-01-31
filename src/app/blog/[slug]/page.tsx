@@ -1,4 +1,5 @@
 import Image from "next/image";
+import './style.scss';
 
 export default function BlogDetails({
   params,
@@ -169,6 +170,95 @@ export default function BlogDetails({
               <div className="col-lg-8">
                 <p>Marble creates a luxurious, sculpted look that enhances high-end pool designs when used thoughtfully. It performs best in shaded or lightly exposed areas because it reacts to strong chemicals and prolonged sunlight.</p> 
                 <p>Varieties like Torro Marble and Atmos Marble offer elegant tones and soft veining that elevate premium outdoor spaces. Although visually striking, marble demands more care, placing it at the lower end of practicality for everyday family pools.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+          {/* Pool */}
+        <div className="container py-md-5 py-4">
+
+          <div className="row">
+            <div className="col-lg-3">
+              <div className="d-flex flex-column h-100 justify-content-between pe-md-3">
+                <h2 className="h2">Pool Paving Considerations for Australian Backyards</h2>
+                <p>Designing a pool area that performs well year-round means thinking beyond appearance. These are the key considerations that help your paving last and stay practical in Australian backyard conditions.</p>
+              </div>
+            </div>
+
+            <div className="col-lg-9">
+              <Image
+                src="/blog/pool-playing-thumb.webp"
+                alt="Blog Hero"
+                width={1024}
+                height={576}
+                className="w-100 h-auto"
+                priority
+              />
+            </div>
+          </div>
+
+        </div>
+
+        <div className="container"> 
+
+          <div className="border p-4 mb-3">
+            <div className="row">
+              <div className="col-lg-4">
+                <h3 className="h3 mb-2 mb-md-0">1. Saltwater vs Chlorinated Pools</h3>
+              </div>
+
+              <div className="col-lg-8">
+                <p>Stone near saltwater needs strong resistance to salt exposure, so choosing dense, low-porosity materials helps prevent long-term damage. Chlorinated pools are more forgiving, but both environments benefit from correct sealing and routine washing to protect the surface.</p> 
+              </div>
+            </div>
+          </div>
+
+          <div className="border p-4 mb-3">
+            <div className="row">
+              <div className="col-lg-4">
+                <h3 className="h3 mb-2 mb-md-0">2. Heat Reflection for North-Facing Pools</h3>
+              </div>
+
+              <div className="col-lg-8">
+                <p>North-facing pools receive stronger sunlight, so selecting light-toned stones reduces surface heat and keeps the area comfortable. These colours reflect more warmth, which helps maintain safe, usable spaces during warm Australian summer afternoons.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border p-4 mb-3">
+            <div className="row">
+              <div className="col-lg-4">
+                <h3 className="h3 mb-2 mb-md-0">3. Drainage and Fall Requirements</h3>
+              </div>
+
+              <div className="col-lg-8">
+                <p>Good drainage prevents puddling and reduces surface issues over time. Ensuring the right fall directs water away from the pool edge and prevents moisture from sitting on the surface, supporting long-term durability and safe daily use.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border p-4 mb-3">
+            <div className="row">
+              <div className="col-lg-4">
+                <h3 className="h3 mb-2 mb-md-0">4. Compatibility With Surrounding Landscaping</h3>
+              </div>
+
+              <div className="col-lg-8">
+                <p>Stone choices should complement nearby garden beds, turf, and hardscape features to maintain visual harmony. Matching tones and textures helps create a cohesive backyard setting that feels intentional while keeping maintenance levels balanced across the space.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border p-4 mb-3">
+            <div className="row">
+              <div className="col-lg-4">
+                <h3 className="h3 mb-2 mb-md-0">5. Regional Climate Differences</h3>
+              </div>
+
+              <div className="col-lg-8">
+                <p>Different regions experience different conditions, so stone selection should reflect local weather patterns. Melbourne’s cooler climate, Queensland’s humidity, and Perth’s heat all influence which materials perform best while still retaining their colour and texture throughout the year.</p>
               </div>
             </div>
           </div>

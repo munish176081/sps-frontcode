@@ -1,0 +1,14 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixin" as *;
+@use "@/styles/flexbox" as *;
+@use "@/styles/components/button" as *;
+
+.blog-detail {
+    .border {
+        .h3 {
+            @media (min-width: 1400px) {
+                max-width: 70%;
+            }
+        }
+    }
+}

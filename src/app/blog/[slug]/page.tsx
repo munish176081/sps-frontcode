@@ -8,7 +8,7 @@ const relatedPosts = [
     slug: "common-bluestone-installation-mistakes",
     image: "/blog/blog-list-thumb1.webp",
     featured: true,
-    date: "08, Dec 2025",
+    date: "10, Dec 2025",
     title: "Common Bluestone Installation Mistakes And How To Avoid Them",
     excerpt:
       "Bluestone looks incredible, yet almost 4 in 10 projects fail early because of simple installation slip-ups...",

@@ -24,7 +24,6 @@ const relatedPosts = [
   },
 ];
 
-
 export default function BlogDetails({
   params,
 }: {

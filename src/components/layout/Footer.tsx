@@ -15,7 +15,7 @@ export default function Footer() {
               The first free end-to-end analytics service for the site, designed
               to work with enterprises.
             </p>
-            <Button rounded size="md" label="Get quote" href="#" variant="white" className="icon-dot" />
+            <Button rounded size="md" label="Get quote" href="/get-quote" variant="white" className="icon-dot" />
           </div>
 
           {/* RIGHT CONTENT */}

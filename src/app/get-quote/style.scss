@@ -1,0 +1,38 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixin" as *;
+@use "@/styles/flexbox" as *;
+@use "@/styles/components/button" as *;
+
+.list-quote{
+    li {
+        font-size: 14px;
+        color: $text-color;
+        letter-spacing: -1%;
+        &::marker {
+            color: inherit;
+        }
+    }
+}
+
+.quote-text {
+    .d-flex {
+         gap: 20px;
+        @media (min-width:1200px) {
+            gap: 30px;
+        }
+    }
+    p {
+        color: $dark-grey-400;
+    }
+    .h6 {
+        font-weight: 400;
+        a {font-weight: 500;}
+        @media (max-width:1200px) {
+            font-size: 18px;
+            color: $text-color;
+            a {
+                font-size: 22px;
+            }
+        }
+    }
+}

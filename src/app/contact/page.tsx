@@ -1,8 +1,8 @@
 import PageHeader from '@/components/ui/PageHeader';
-import './style.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
+import './style.scss';
 
 export default function ContactPage() {
   return (
@@ -13,8 +13,7 @@ export default function ContactPage() {
       <section className="py-5 contact-info-block">
         <div className="container">
           <div className="row flex-lg-row flex-column-reverse g-5">
-
-            {/* MAP / VISUAL */}
+ 
             <div className="col-lg-5">
               <Image
                 src="/contact/map-pic.webp"
@@ -108,7 +107,7 @@ export default function ContactPage() {
 
       <hr />
 
-      {/* CONTACT FORM */}
+      {/* Contact Form */}
       <section className="py-5 contact-form-sec">
         <div className="container">
           <div className="row">

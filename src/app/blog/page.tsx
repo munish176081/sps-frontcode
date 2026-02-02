@@ -20,7 +20,7 @@ const posts = [
   },
   {
     id: 2,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-2",
     image: "/blog/blog-list-thumb2.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -29,7 +29,7 @@ const posts = [
   },
   {
     id: 3,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-3",
     image: "/blog/blog-list-thumb3.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -38,7 +38,7 @@ const posts = [
   },
   {
     id: 4,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-4",
     image: "/blog/blog-list-thumb4.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -47,7 +47,7 @@ const posts = [
   },
   {
     id: 5,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-11",
     image: "/blog/blog-list-thumb5.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -56,7 +56,7 @@ const posts = [
   },
   {
     id: 6,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-5",
     image: "/blog/blog-list-thumb6.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -74,7 +74,7 @@ const posts = [
   },
   {
     id: 8,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-6",
     image: "/blog/blog-list-thumb1.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -83,7 +83,7 @@ const posts = [
   },
   {
     id: 9,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-7",
     image: "/blog/blog-list-thumb1.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -92,7 +92,7 @@ const posts = [
   },
   {
     id: 10,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-8",
     image: "/blog/blog-list-thumb1.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -101,7 +101,7 @@ const posts = [
   },
   {
     id: 11,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-9",
     image: "/blog/blog-list-thumb1.webp",
     featured: true,
     date: "08, Dec 2025",
@@ -110,7 +110,7 @@ const posts = [
   },
   {
     id: 12,
-    slug: "common-bluestone-installation-mistakes",
+    slug: "common-bluestone-installation-mistakes-10",
     image: "/blog/blog-list-thumb1.webp",
     featured: true,
     date: "08, Dec 2025",

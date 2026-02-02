@@ -112,7 +112,7 @@ label {
     font-size: 22px;
   }
 }
-p { 
+p, li { 
   font-size: 14px;
   color: $text-color;
   @media (min-width: 767.99px) {
@@ -124,6 +124,15 @@ p {
   }
   &:last-child{
     margin-bottom: 0;
+  }
+  strong {
+    font-weight: 500;
+    color: $black;
+  }
+}
+li {
+  &::marker {
+    color: $black; 
   }
 }
 hr {

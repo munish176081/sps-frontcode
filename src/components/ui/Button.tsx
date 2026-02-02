@@ -6,6 +6,7 @@ type ButtonProps = {
   variant?: "white" | "black" | "outline";
   size?: "sm" | "md" | "lg" | "full";
   rounded?: boolean;
+  showIcon?: boolean;
   className?: string;
   onClick?: () => void;
 };
@@ -16,6 +17,7 @@ export default function Button({
   variant = "white",
   size = "md",
   rounded = false,
+  showIcon = true,
   className = "",
   onClick,
 }: ButtonProps) {
@@ -27,16 +29,38 @@ export default function Button({
   ];
   const classes = [...baseClasses, className].filter(Boolean).join(" ");
 
+  const ArrowIcon = showIcon ? (
+    <em className="icon">
+      <svg
+        width="22"
+        height="10"
+        viewBox="0 0 22 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17 1L21 5L17 9"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M1 5H21"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </em>
+  ) : null;
+
   if (href) {
     return (
       <Link href={href} className={classes}>
         {label}
-        <em className="icon">
-          <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 1L21 5L17 9" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M1 5H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </em>
+        {ArrowIcon}
       </Link>
     );
   }
@@ -44,12 +68,7 @@ export default function Button({
   return (
     <button className={classes} onClick={onClick}>
       {label}
-      <em className="icon">
-        <svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 1L21 5L17 9" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M1 5H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </em>
+      {ArrowIcon}
     </button>
   );
 }

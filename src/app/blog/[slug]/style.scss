@@ -12,3 +12,10 @@
         }
     }
 }
+
+.list-styled {
+    @media (max-width: 767px) {
+        list-style: none;
+        padding: 0;
+    }
+}

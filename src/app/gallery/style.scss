@@ -1,0 +1,24 @@
+.gallery-page {
+  background: #fff;
+}
+
+.gallery-masonry {
+  column-count: 2;
+  column-gap: 16px;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }  
+}
+ 
+
+.gallery-item.full-width {
+  grid-column: 1 / -1;
+}
+

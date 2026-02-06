@@ -9,7 +9,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="position-relative header bg-white position-sticky top-0 z-3">
+    <header className="position-relative header bg-white position-sticky top-0">
       <div className="container d-flex flex-wrap justify-content-between align-items-center">
 
         <Link href="/" className="logo">

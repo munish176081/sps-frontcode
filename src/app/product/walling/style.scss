@@ -44,8 +44,17 @@
     }
     svg {
         width: 27px;
+        transition: all .5s ease-in-out;
         @media (max-width: 1200px) {
             width: 20px;
+        }
+    }
+    &:hover {
+        background: $brand-primary;
+        svg {
+            path {
+                stroke: $white;
+            }
         }
     }
 }

@@ -1,9 +1,22 @@
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import StoneFeatureSection from "../_components/StoneFeatureSection";
-import './style.scss';
 import FaqSection from "@/components/ui/FaqSection";
+import WallingCategories from "../_components/WallingCategories";
 import Link from "next/link";
+import WallingPhotos from "../_components/wallling-photos";
+import './style.scss';
+import ProductGallery from "../_components/ProductGallery";
+ 
+
+const PRODUCT_IMAGES = [
+  "/products/walling-banner-pic.webp",
+  "/products/walling-banner-pic.webp",
+  "/products/walling-banner-pic.webp",
+  "/products/walling-banner-pic.webp",
+  "/products/walling-banner-pic.webp",
+  "/products/walling-banner-pic.webp",
+];
 
 export default function ProductLanding() {
   return (
@@ -29,7 +42,7 @@ export default function ProductLanding() {
               <h1 className="h1 mb-4 mb-md-0">Create Stunning Features with Our Natural Stone Walling</h1>
             </div>
             <div className="col-md-5 text-end">
-              <Button
+              <Button 
                 label="View Collection"
                 href="/product/walling"
                 variant="black"
@@ -124,12 +137,14 @@ export default function ProductLanding() {
         </div>
       </section>
 
+      <WallingPhotos />
+
       <hr />
 
       <section className="py-5 paving-collections">
         <div className="container">
 
-          {/* TOP ROW */}
+          {/* Top Row */}
           <div className="row align-items-end mb-4">
             <div className="col-lg-8">
               <small className="badge-text badge-primary d-block mb-4">Collections</small>
@@ -140,6 +155,7 @@ export default function ProductLanding() {
 
             <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
               <Button
+                href="/get-quote"
                 label="Get quote"
                 variant="black"
                 rounded
@@ -153,14 +169,14 @@ export default function ProductLanding() {
 
             <div className="col-lg-4 d-flex flex-column align-items-start gap-3">
               <h3 className="h3 mb-3">Ledge Stone</h3>
-              <Link href="/" className="btn-circle bg-transparent rounded-circle d-flex align-items-center justify-content-center">
+              <Link href="#" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
                 <svg width="14" height="31" viewBox="0 0 14 31" fill="none">
                   <path d="M1.38892 6.94458L6.94447 1.38903L12.5 6.94458" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M6.94458 29.1667L6.94458 1.38897" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Link>
             </div>
- 
+
             <div className="col-lg-8">
               <p className="mb-0 text-muted">
                 Ledge stone is a linear profile made from individual rectangular pieces, ideal for piers, chimneys, feature walls, fireplaces, and retaining walls. Each piece is approximately 30 mm thick and varies in size, with a sawn back for simple, direct glue installation. Substrates must support a weight of around 75 kg per m².
@@ -172,13 +188,74 @@ export default function ProductLanding() {
         </div>
       </section>
 
+      <hr className="py-3 m-0" />
+
+      <WallingCategories />
+
+      <section className="py-5 paving-collections">
+        <div className="container">
+
+          <div className="row align-items-start pt-4">
+
+            <div className="col-lg-4 d-flex flex-column align-items-start gap-3">
+              <h3 className="h3 mb-3">Freeform</h3>
+              <Link href="#" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
+                <svg width="14" height="31" viewBox="0 0 14 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 23.6108L6.94444 29.1664L1.38889 23.6108" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.94434 1.38867L6.94433 29.1665" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="col-lg-8">
+              <p className="mb-0 text-muted">
+                Our free form range features larger, irregular stones ideal for fireplaces, feature walls, and façades. Each piece is around 30 mm thick, can be installed grouted or dry-stacked, and includes a sawn back for easy glue installation. Substrates must support approximately 75 kg per m².
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <hr className="py-0 m-0" />
+
+      <section className="py-5 paving-collections">
+        <div className="container">
+
+          <div className="row align-items-start pt-4">
+
+            <div className="col-lg-4 d-flex flex-column align-items-start gap-3">
+              <h3 className="h3 mb-3">Ashlar Pattern</h3>
+              <Link href="#" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
+                <svg width="14" height="31" viewBox="0 0 14 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 23.6108L6.94444 29.1664L1.38889 23.6108" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.94434 1.38867L6.94433 29.1665" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="col-lg-8">
+              <p className="mb-0 text-muted">
+                Our free form range features larger, irregular stones ideal for fireplaces, feature walls, and façades. Each piece is around 30 mm thick, can be installed grouted or dry-stacked, and includes a sawn back for easy glue installation. Substrates must support approximately 75 kg per m².
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <hr className="py-0 m-0" />
 
       <StoneFeatureSection />
-
 
       <FaqSection />
 
 
+
+      <ProductGallery images={PRODUCT_IMAGES} />
     </>
   );
 }

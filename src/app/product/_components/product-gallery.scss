@@ -1,0 +1,15 @@
+.product-gallery {
+  .product-gallery-main { 
+    overflow: hidden;
+  }
+
+  .product-gallery-thumbs {
+    .swiper-slide { 
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+    }
+    .thumb { 
+      overflow: hidden; 
+    }
+  }
+}

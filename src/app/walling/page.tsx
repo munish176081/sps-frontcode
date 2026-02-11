@@ -4,8 +4,7 @@ import StoneFeatureSection from "../../components/categories/_components/StoneFe
 import FaqSection from "@/components/ui/FaqSection";
 import WallingCategories from "../../components/categories/_components/WallingCategories";
 import Link from "next/link";
-import WallingPhotos from "../../components/categories/_components/wallling-photos";
-import ProductGallery from "../../components/categories/_components/ProductGallery";
+import WallingPhotos from "../../components/categories/_components/wallling-photos"; 
 import './style.scss';
  
 const PRODUCT_IMAGES = [
@@ -252,9 +251,6 @@ export default function ProductLanding() {
 
       <FaqSection />
 
-
-
-      <ProductGallery images={PRODUCT_IMAGES} />
     </>
   );
 }

@@ -2,12 +2,9 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import StoneFeatureSection from "../_components/StoneFeatureSection";
 import FaqSection from "@/components/ui/FaqSection";
-import WallingCategories from "../_components/WallingCategories";
 import Link from "next/link";
-import WallingPhotos from "../_components/wallling-photos";
-import './style.scss';
 import ProductGallery from "../_components/ProductGallery";
- 
+import './style.scss';
 
 const PRODUCT_IMAGES = [
   "/products/walling-banner-pic.webp",
@@ -21,62 +18,100 @@ const PRODUCT_IMAGES = [
 export default function ProductLanding() {
   return (
     <>
-      <section className="py-5">
+
+      <section className="page-header mt-0 mt-md-5 mb-4 pt-4 pt-md-5 pb-md-4">
+        <div className="container">
+          <div className="row align-items-end g-3">
+            <Link href="/">
+              <svg className="me-4" width="31" height="14" viewBox="0 0 31 14" fill="none">
+                <path d="M6.94531 12.5L1.38976 6.94445L6.94531 1.38889" stroke="#757575" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M29.167 6.94443L1.38921 6.94443" stroke="#757575" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              Back to paving collections
+            </Link>
+            <div className="col-md-8">
+              <h1 className="h1 page-title mb-0">Bluestone</h1>
+            </div>
+            <div className="col-md-4 text-md-end">
+              <Button href="/get-quote" rounded size="md" label="Get quote" variant="black" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section className="py-4 product-description">
         <div className="container">
 
-          {/* Walling Card */}
-          <div className="row align-items-center mb-5">
-            <div className="col-lg-6 col-md-7">
-              <Image
-                src="/products/walling-banner-pic.webp"
-                alt="Walling"
-                width={773}
-                height={393}
-                className="w-100 h-auto"
-              />
+          {/* Dropdown */}
+          <div className="row mb-4">
+            <div className="col-md-4 col-lg-3">
+              <select className="form-select rounded-0 border">
+                <option>Honed Bluestone</option>
+                <option>Flamed Bluestone</option>
+                <option>Sawn Bluestone</option>
+              </select>
             </div>
           </div>
 
-          <div className="row align-items-end">
-            <div className="col-md-7">
-              <h1 className="h1 mb-4 mb-md-0">Create Stunning Features with Our Natural Stone Walling</h1>
+          {/* Content Row */}
+          <div className="row">
+
+            <div className="col-lg-8 pe-md-5">
+
+              <div className="h3 fw-normal">
+                <p>
+                  Honed Bluestone delivers a smooth, elegant finish with
+                  consistent blue-grey tones that suit both contemporary and
+                  traditional spaces.
+                </p>
+
+                <p>
+                  Its refined appearance makes it ideal for interiors, alfresco
+                  areas, courtyards, and poolside designs where a softer texture
+                  is preferred without sacrificing durability.
+                </p>
+              </div>
             </div>
-            <div className="col-md-5 text-end">
-              <Button 
-                label="View Collection"
-                href="/product/walling"
-                variant="black"
-                rounded
-              />
+
+            {/* RIGHT SMALL TEXT */}
+            <div className="col-lg-4 mt-4 mt-lg-0">
+              <p className="small text-muted">
+                This versatile stone brings a sleek, architectural feel to both indoor floors and outdoor surfaces, offering a polished aesthetic that enhances the flow between indoor and outdoor environments.
+              </p>
             </div>
+
           </div>
+
+          <ProductGallery images={PRODUCT_IMAGES} />
 
         </div>
       </section>
 
       <hr />
 
-      <section className="py-5 overview-section">
+      <section className="py-4 py-md-5 sizes-section">
         <div className="container">
           <div className="row align-items-start">
 
-            <div className="col-lg-2 mb-3 mb-lg-0">
-              <small className="badge-text badge-primary d-block mb-4">
-                Overview
-              </small>
+            {/* LEFT TITLE */}
+            <div className="col-md-6 col-lg-5">
+              <h3 className="h2 mb-0">
+                Available Sizes for <br className="d-none d-md-block"/>
+                Honed Bluestone
+              </h3>
             </div>
 
-            <div className="col-lg-6 mb-4 mb-lg-0 pe-md-4 pe-lg-5">
-              <h2 className="h3 mb-3 mb-md-0 pe-lg-5">
-                Sustainably Sourced And Designed With Contemporary Architecture In Mind –
-                Our Natural Stone Walling Is Proof That Boundary Walls Don’t Have To Be Ordinary.
-              </h2>
-            </div>
-
-            <div className="col-lg-4">
-              <p>
-                Crafted from premium natural stone and shaped by skilled hands, our walling solutions offer exceptional strength, texture, and visual impact. Built to withstand the elements, they require minimal maintenance while adding timeless character to any space.
-              </p>
+            {/* RIGHT LIST */}
+            <div className="col-md-6 col-lg-7 text-md-end">
+              <ul className="sizes-list ms-auto mb-0 d-inline-block text-md-start">
+                <li>800 × 400 × 20 mm</li>
+                <li>800 × 400 × 30 mm</li>
+                <li>600 × 300 × 20 mm</li>
+                <li>Honed crazy paving: 20 mm thick</li>
+              </ul>
             </div>
 
           </div>
@@ -85,177 +120,66 @@ export default function ProductLanding() {
 
       <hr />
 
-      <section className="py-5 product-specs">
+      <section className="py-4 py-md-5 sizes-section">
         <div className="container">
-          <div className="d-grid grid-col-5">
+          <div className="row align-items-start">
 
-            {/* Load Class */}
-            <div className="col">
-              <h3 className="text-uppercase text-muted text-small mb-4">
-                Load Class
+            {/* LEFT TITLE */}
+            <div className="col-md-6 col-lg-5">
+              <h3 className="h2 mb-0">
+                Coping (bullnose)
               </h3>
-              <p className="text-small">Walls — for architectural cladding, facades, feature walls, garden walls</p>
             </div>
 
-            {/* Compliance */}
-            <div className="col">
-              <h3 className="text-uppercase text-muted text-small mb-4">
-                Compliance
-              </h3>
-              <p className="text-small">Material sourced and processed to industry-recommended standards for natural stone wall cladding.</p>
-            </div>
-
-            {/* Suitable For */}
-            <div className="col">
-              <h3 className="text-uppercase text-muted text-small mb-4">
-                Suitable For
-              </h3>
-              <p className="text-small">Indoor And Outdoor Walls</p>
-            </div>
-
-            {/* Materials */}
-            <div className="col">
-              <h3 className="text-uppercase text-muted text-small mb-4">
-                Materials
-              </h3>
-              <p className="text-small">100% Natural Stone</p>
-              <p className="text-small">Sustainably Sourced</p>
-              <p className="text-small">Durable & Weather-Resistant</p>
-            </div>
-
-            {/* Finish & Formats */}
-            <div className="col">
-              <h3 className="text-uppercase text-muted text-small mb-4">
-                Finish & Formats
-              </h3>
-              <p className="text-small">Indoor And Outdoor Walls, Facades, Boundary Walls,
-                Feature Walls, Architectural Cladding, Landscape Walls
-              </p>
+            {/* RIGHT LIST */}
+            <div className="col-md-6 col-lg-7 text-md-end">
+              <ul className="sizes-list ms-auto mb-0 d-inline-block text-md-start">
+                <li>600 × 300 × 30 mm</li>
+                <li>800 × 400 × 30 mm</li>
+                <li>1000 × 500 × 30 mm</li>
+              </ul>
             </div>
 
           </div>
         </div>
       </section>
-
-      <WallingPhotos />
 
       <hr />
-
-      <section className="py-5 paving-collections">
+     
+      <section className="py-4 py-md-5 sizes-section">
         <div className="container">
+          <div className="row align-items-start">
 
-          {/* Top Row */}
-          <div className="row align-items-end mb-4">
-            <div className="col-lg-8">
-              <small className="badge-text badge-primary d-block mb-4">Collections</small>
-              <h2 className="h1 mb-0">
-                Browse Our Paving <br /> Collections
-              </h2>
+            {/* LEFT TITLE */}
+            <div className="col-md-6 col-lg-5">
+              <h3 className="h2 mb-0">
+                Coping (drop down):
+              </h3>
             </div>
 
-            <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
-              <Button
-                href="/get-quote"
-                label="Get quote"
-                variant="black"
-                rounded
-              />
-            </div>
-          </div>
-
-          <hr />
-
-          <div className="row align-items-start pt-4">
-
-            <div className="col-lg-4 d-flex flex-column align-items-start gap-3">
-              <h3 className="h3 mb-3">Ledge Stone</h3>
-              <Link href="#" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
-                <svg width="14" height="31" viewBox="0 0 14 31" fill="none">
-                  <path d="M1.38892 6.94458L6.94447 1.38903L12.5 6.94458" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M6.94458 29.1667L6.94458 1.38897" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="col-lg-8">
-              <p className="mb-0 text-muted">
-                Ledge stone is a linear profile made from individual rectangular pieces, ideal for piers, chimneys, feature walls, fireplaces, and retaining walls. Each piece is approximately 30 mm thick and varies in size, with a sawn back for simple, direct glue installation. Substrates must support a weight of around 75 kg per m².
-              </p>
+            {/* RIGHT LIST */}
+            <div className="col-md-6 col-lg-7 text-md-end">
+              <ul className="sizes-list ms-auto mb-0 d-inline-block text-md-start">
+                <li>600 × 350 × 20/40 mm</li>
+                <li>600 × 350 × 30/80 mm</li>
+                <li>800 × 400 × 20/50 mm</li>
+                <li>800 × 400 × 30/80 mm</li>
+                <li>1000 × 250 × 30/60 mm</li>
+                <li>1000 × 350 × 30/80 mm</li>
+                <li>1005 × 500 × 30/80 mm</li>
+              </ul>
             </div>
 
           </div>
-
         </div>
       </section>
-
-      <hr className="py-3 m-0" />
-
-      <WallingCategories />
-
-      <section className="py-5 paving-collections">
-        <div className="container">
-
-          <div className="row align-items-start pt-4">
-
-            <div className="col-lg-4 d-flex flex-column align-items-start gap-3">
-              <h3 className="h3 mb-3">Freeform</h3>
-              <Link href="#" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
-                <svg width="14" height="31" viewBox="0 0 14 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.5 23.6108L6.94444 29.1664L1.38889 23.6108" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M6.94434 1.38867L6.94433 29.1665" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="col-lg-8">
-              <p className="mb-0 text-muted">
-                Our free form range features larger, irregular stones ideal for fireplaces, feature walls, and façades. Each piece is around 30 mm thick, can be installed grouted or dry-stacked, and includes a sawn back for easy glue installation. Substrates must support approximately 75 kg per m².
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <hr className="py-0 m-0" />
-
-      <section className="py-5 paving-collections">
-        <div className="container">
-
-          <div className="row align-items-start pt-4">
-
-            <div className="col-lg-4 d-flex flex-column align-items-start gap-3">
-              <h3 className="h3 mb-3">Ashlar Pattern</h3>
-              <Link href="#" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
-                <svg width="14" height="31" viewBox="0 0 14 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.5 23.6108L6.94444 29.1664L1.38889 23.6108" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M6.94434 1.38867L6.94433 29.1665" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-            </div>
-
-            <div className="col-lg-8">
-              <p className="mb-0 text-muted">
-                Our free form range features larger, irregular stones ideal for fireplaces, feature walls, and façades. Each piece is around 30 mm thick, can be installed grouted or dry-stacked, and includes a sawn back for easy glue installation. Substrates must support approximately 75 kg per m².
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      <hr className="py-0 m-0" />
+       
 
       <StoneFeatureSection />
 
       <FaqSection />
 
 
-
-      <ProductGallery images={PRODUCT_IMAGES} />
     </>
   );
 }

@@ -32,7 +32,7 @@ export default function GalleryPage() {
     <>
       <section className="page-header mt-0 mt-md-5 mb-4 pt-4 pt-md-5 pb-md-4">
         <div className="container">
-          <div className="row align-items-start g-3">
+          <div className="row align-items-end g-3">
             <div className="col-md-8">
               <h1 className="h1 page-title mb-0">Gallery</h1>
             </div>

@@ -3,58 +3,22 @@
 @use "@/styles/flexbox" as *;
 @use "@/styles/components/button" as *;
 
-.overview-section {
-    h2 {
-        font-weight: 400;
-    }
-    p {
-        font-size: 14px;
-    }
-}
-
-.product-specs {
-    p {
-        color: $black;
-        max-width: 150px;
-        text-transform: capitalize;
-    }
-}
-
-.grid-col-5 {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-    @media (max-width: 1300px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    @media (max-width: 991px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @media (max-width: 575px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.btn-circle {
-    border: 1px solid rgba(0,0,0,.2);
-    width: 100px;
-    height: 100px;
-    @media (max-width: 1200px) {
-        width: 60px;
-        height: 60px;
-    }
-    svg {
-        width: 27px;
-        transition: all .5s ease-in-out;
-        @media (max-width: 1200px) {
-            width: 20px;
+.product-description {
+    .h3{
+        p {
+            font-size: inherit;
+            color: $black;
+            &:not(:last-child) {
+                margin-bottom: 2rem;                
+            }
         }
     }
-    &:hover {
-        background: $brand-primary;
-        svg {
-            path {
-                stroke: $white;
-            }
+}
+
+.sizes-section {
+    ul {
+        @media (min-width:820px) {
+            min-width: 397px;
         }
     }
 }

@@ -6,9 +6,9 @@ import FaqSection from "@/components/ui/FaqSection";
 import WallingPhotos from "../../components/categories/_components/wallling-photos";  
 import { PRODUCT_CATEGORIES } from "@/data/product";
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
-import './style.scss';
 import ProductPhotos from "@/components/products/ProductPhotos";
 import { PRODUCT_PHOTOS } from "@/data/productPhotos";
+import './style.scss';
 
 export default function WallingPage() {
   return (

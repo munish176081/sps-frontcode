@@ -1,26 +1,5 @@
 import Image from "next/image";
 
-const LIFETIME_IMAGES = [
-  {
-    src: "/home/built-lifetime/lfe-image.webp",
-    alt: "Outdoor space",
-  },
-  {
-    src: "/home/built-lifetime/lfe-image2.webp",
-    alt: "Stone pattern",
-  },
-  {
-    src: "/home/built-lifetime/lfe-image3.webp",
-    alt: "Stone wall",
-  },
-  {
-    src: "/home/built-lifetime/lfe-image4.webp",
-    alt: "Modern wall",
-    hideOnMobile: true, // 👈 special case
-  },
-];
-
-
 export default function WallingPhotos() {
   return (
     <section className="py-0 pb-5 mt-lg-4">

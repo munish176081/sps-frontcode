@@ -1,22 +1,14 @@
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import Link from "next/link"; 
 import StoneFeatureSection from "../../components/categories/_components/StoneFeatureSection";
-import FaqSection from "@/components/ui/FaqSection";
-import WallingCategories from "../../components/categories/_components/WallingCategories";
-import Link from "next/link";
-import WallingPhotos from "../../components/categories/_components/wallling-photos"; 
+import FaqSection from "@/components/ui/FaqSection"; 
+import WallingPhotos from "../../components/categories/_components/wallling-photos";  
+import { PRODUCT_CATEGORIES } from "@/data/product";
+import CategoriesGrid from "@/components/categories/CategoriesGrid";
 import './style.scss';
- 
-const PRODUCT_IMAGES = [
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-];
 
-export default function ProductLanding() {
+export default function WallingPage() {
   return (
     <>
       <section className="py-5">
@@ -36,10 +28,10 @@ export default function ProductLanding() {
           </div>
 
           <div className="row align-items-end">
-            <div className="col-md-7">
+            <div className="col-md-8">
               <h1 className="h1 mb-4 mb-md-0">Create Stunning Features with Our Natural Stone Walling</h1>
             </div>
-            <div className="col-md-5 text-end">
+            <div className="col-md-4 text-end">
               <Button 
                 label="View Collection"
                 href="/walling/"
@@ -188,7 +180,10 @@ export default function ProductLanding() {
 
       <hr className="py-3 m-0" />
 
-      <WallingCategories />
+      <CategoriesGrid
+        category="walling"
+        items={PRODUCT_CATEGORIES.walling}
+      />
 
       <section className="py-5 paving-collections">
         <div className="container">

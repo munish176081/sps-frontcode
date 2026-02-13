@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CategoryItem } from "@/data/products";
+import { CategoryItem } from "../../data/product";
 
 type Props = {
   category: string;

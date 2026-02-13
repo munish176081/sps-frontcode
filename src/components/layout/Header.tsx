@@ -7,6 +7,7 @@ import "./style.scss";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <header className="position-relative header bg-white position-sticky top-0">
@@ -18,12 +19,25 @@ export default function Header() {
 
         <nav className={`navbar ${open ? 'open' : ''}`}>
           <ul className="nav">
-            <li>
-              <Link href="/products" onClick={() => setOpen(false)} className="menu-dropdown">Products
+            <li
+              className={`has-dropdown ${dropdownOpen ? "active" : ""}`}
+              onMouseEnter={() => window.innerWidth > 992 && setDropdownOpen(true)}
+              onMouseLeave={() => window.innerWidth > 992 && setDropdownOpen(false)}
+            >
+              <Link href="#" 
+                className="menu-dropdown"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                Products
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 13.5v-11m0 0L3.5 7M8 2.5 12.5 7" stroke="currentColor" strokeWidth=".8" strokeLinejoin="bevel"></path>
                 </svg>
               </Link>
+              <ul className={`dropdown ${dropdownOpen ? "show" : ""}`}>
+                <li><Link href="/walling">Walling</Link></li>
+                <li><Link href="/paving">Paving</Link></li>
+                <li><Link href="/brick">Crazy Paving</Link></li>
+              </ul>
             </li>
             <li><Link href="/about" onClick={() => setOpen(false)}>About</Link></li>
             <li><Link href="/gallery" onClick={() => setOpen(false)}>Gallery</Link></li>

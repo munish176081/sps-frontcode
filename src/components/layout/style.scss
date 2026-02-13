@@ -3,38 +3,38 @@
 
 .header {
     background: $white;
-    border-bottom: 1px solid rgba($black, .10); 
+    border-bottom: 1px solid rgba($black, .10);
     z-index: 999;
-    @media (min-width:1200px){
+    @media (min-width:1200px) {
         padding: 20px 0;
     }
-    @media (max-width:1199.99px){
+    @media (max-width:1199.99px) {
         padding: 12px 0;
     }
-    .navbar { 
-        @media (max-width: 820px){
-            display: none; 
+    .navbar {
+        @media (max-width: 820px) {
+            display: none;
             &.open {
-                @include flexbox(); 
+                @include flexbox();
                 @include flex-direction (column);
                 position: absolute;
-                top:calc(100% + 1px);
+                top: calc(100% + 1px);
                 left: 0;
-                width: 100%;                
+                width: 100%;
                 background-color: $grey-color-400;
                 box-shadow: 0 0 5px rgba($black, .20);
-                z-index: 11; 
+                z-index: 11;
             }
         }
         .nav {
             gap: 15px;
-            @media (min-width: 1200px){
+            @media (min-width: 1200px) {
                 gap: 120px;
             }
-            @media (min-width: 820px) and (max-width: 1199.99px){
+            @media (min-width: 820px) and (max-width: 1199.99px) {
                 gap: 50px;
             }
-            @media (max-width: 575px){
+            @media (max-width: 820px) {
                 width: 100%;
                 padding: 10px 15px;
                 @include flex-direction (column);
@@ -42,10 +42,10 @@
             li {
                 position: relative;
                 a {
-                    @media (min-width: 1200px){
+                    @media (min-width: 1200px) {
                         font-size: 22px;
                     }
-                    @media (max-width: 1199.99px){
+                    @media (max-width: 1199.99px) {
                         font-size: 18px;
                     }
                     &.menu-dropdown {
@@ -58,24 +58,77 @@
                             transition: all .5s ease-in-out;
                         }
                     }
-                    &:hover{
+                    &:hover {
                         &.menu-dropdown {
-                            svg {                                
+                            svg {
                                 transform: rotate(0deg);
                             }
                         }
                     }
                 }
             }
-        } 
+            @at-root {
+                .has-dropdown {
+                    position: relative;
+                    &.active {
+                        a.menu-dropdown svg {
+                            transform: rotate(0)!important;
+                        }
+                    }
+                }
+                .menu-dropdown {
+                    background: none;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    cursor: pointer;
+                    font-weight: 500;
+                }
+                .dropdown {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background: $white;
+                    min-width: 200px;
+                    padding: 15px 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(10px);
+                    transition: 0.3s ease;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                    list-style: none;
+                      @media (max-width: 992px) { 
+                        position: static;
+                        box-shadow: none;
+                        padding-left: 15px;
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                        display: none;
+                        &.show {
+                            display: block;
+                        }
+                      }
+                    li {
+                        padding: 8px 20px;
+                    }
+                    &.show {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
     }
     @at-root .logo {
         img {
             height: auto;
-            @media (min-width: 820px){
-               width: 172px;
+            @media (min-width: 820px) {
+                width: 172px;
             }
-           @media (max-width: 819.99px){
+            @media (max-width: 819.99px) {
                 width: 110px;
             }
         }
@@ -85,9 +138,9 @@
 .menu-toggle {
     display: none;
     gap: 5px;
-    border: none;    
+    border: none;
     background: none;
-    @media (max-width: 819.99px) {       
+    @media (max-width: 819.99px) {
         @include flexbox();
         flex-direction: column;
     }
@@ -102,7 +155,7 @@
 // Footer
 .footer {
     .btn {
-        @media (max-width: 767px) {       
+        @media (max-width: 767px) {
             width: 100%;
         }
     }
@@ -122,7 +175,7 @@
     }
 }
 
-.f_group_col{ 
+.f_group_col {
     display: inline-block;
     color: $grey-color-700;
 }
@@ -168,7 +221,8 @@
         flex-direction: column-reverse;
         gap: 40px;
     }
-    a, span {
+    a,
+    span {
         color: $grey-color-300;
         font-size: 12px;
     }
@@ -201,17 +255,17 @@
 }
 
 .back-top {
-  margin-left: auto;
-  margin-bottom: 30px;
-  width: 100px;
-  height: 100px;
-  @include flexbox;
-  border-radius: 50%;
-  border: 1px solid rgba($white, 0.4); 
-  align-items: center;
-  justify-content: center;
-  transition: all .5s ease-in-out;
-  &:hover {
-    border-color: $white;
-  }
+    margin-left: auto;
+    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+    @include flexbox;
+    border-radius: 50%;
+    border: 1px solid rgba($white, 0.4);
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    &:hover {
+        border-color: $white;
+    }
 }

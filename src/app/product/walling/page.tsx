@@ -173,7 +173,6 @@ export default function ProductLanding() {
           </div>
         </div>
       </section>
-       
 
       <StoneFeatureSection />
 

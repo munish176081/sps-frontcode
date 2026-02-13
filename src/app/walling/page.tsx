@@ -7,6 +7,8 @@ import WallingPhotos from "../../components/categories/_components/wallling-phot
 import { PRODUCT_CATEGORIES } from "@/data/product";
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
 import './style.scss';
+import ProductPhotos from "@/components/products/ProductPhotos";
+import { PRODUCT_PHOTOS } from "@/data/productPhotos";
 
 export default function WallingPage() {
   return (
@@ -128,6 +130,8 @@ export default function WallingPage() {
       </section>
 
       <WallingPhotos />
+
+      <ProductPhotos images={PRODUCT_PHOTOS.walling} />
 
       <hr />
 

@@ -36,7 +36,7 @@ export default function Header() {
               <ul className={`dropdown ${dropdownOpen ? "show" : ""}`}>
                 <li><Link href="/walling">Walling</Link></li>
                 <li><Link href="/paving">Paving</Link></li>
-                <li><Link href="/brick">Crazy Paving</Link></li>
+                <li><Link href="/brick">Brick</Link></li>
               </ul>
             </li>
             <li><Link href="/about" onClick={() => setOpen(false)}>About</Link></li>

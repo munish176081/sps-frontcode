@@ -124,8 +124,6 @@ export default function ProductLanding() {
         </div>
       </section>
 
-      <WallingPhotos />
-
       <ProductPhotos images={PRODUCT_PHOTOS.brick} />
 
       <hr />

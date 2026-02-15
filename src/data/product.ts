@@ -19,7 +19,7 @@ export const PRODUCT_CATEGORIES: Record<string, CategoryItem[]> = {
     {
       title: "Kakadu",
       slug: "kakadu",
-      image: "/products/walling/Kakadu-thumb.webp",
+      image: "/products/walling/Kakadu-Thumb.webp",
     },
     {
       title: "Wyndham",

@@ -128,9 +128,7 @@ export default function WallingPage() {
           </div>
         </div>
       </section>
-
-      <WallingPhotos />
-
+ 
       <ProductPhotos images={PRODUCT_PHOTOS.walling} />
 
       <hr />

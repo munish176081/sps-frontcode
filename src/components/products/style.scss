@@ -10,9 +10,12 @@
                     max-height: 250px;
                 }
                 @media (max-width: 767px) {
-                    max-height: 200px;
+                    max-height: 150px;
                 }
             }
+        }
+        &:last-child {
+            display: none;
         }
     }
 }

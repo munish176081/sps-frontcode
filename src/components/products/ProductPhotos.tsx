@@ -1,12 +1,12 @@
 import Image from "next/image";
-
+import './style.scss';
 type Props = {
   images: string[];
 };
 
 export default function ProductPhotos({ images }: Props) {
   return (
-    <section className="py-0 pb-5 mt-lg-4">
+    <section className="py-0 pb-5 mt-lg-4 categoires_photos">
       <div className="container">
         <div className="row g-3 align-items-start">
           {images.map((img, index) => (

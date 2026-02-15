@@ -58,14 +58,3 @@
         }
     }
 }
-
-.categoirs-photos {
-    .col-4 {
-        &:nth-child(even){
-            img {
-                max-height: 50%;
-                object-fit: cover;;
-            }
-        }
-    }
-}

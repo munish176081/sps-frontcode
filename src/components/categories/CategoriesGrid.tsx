@@ -18,7 +18,7 @@ export default function CategoriesGrid({ category, items }: Props) {
               className="col-6 col-md-4 col-lg-3 position-relative"
             >
               <Link
-                href={`/product/${category}/${item.slug}`}
+                href={`/product/${item.slug}`}
                 className="d-block"
               >
                 <h3 className="h5 mb-4 d-inline-block collection-title">

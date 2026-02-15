@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WallingPhotos() {
   return (
-    <section className="py-0 pb-5 mt-lg-4">
+    <section className="py-0 pb-5 mt-lg-4 categoirs-photos">
       <div className="container">
         {/* Image Row */}
         <div className="row g-3 align-items-start">

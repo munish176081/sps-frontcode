@@ -1,9 +1,9 @@
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import StoneFeatureSection from "../_components/StoneFeatureSection";
+import StoneFeatureSection from "./_components/StoneFeatureSection";
 import FaqSection from "@/components/ui/FaqSection";
 import Link from "next/link";
-import ProductGallery from "../_components/ProductGallery";
+import ProductGallery from "./_components/ProductGallery";
 import './style.scss';
 
 const PRODUCT_IMAGES = [

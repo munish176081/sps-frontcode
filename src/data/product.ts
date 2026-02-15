@@ -36,17 +36,17 @@ export const PRODUCT_CATEGORIES: Record<string, CategoryItem[]> = {
   paving: [
     {
       title: "Bluestone",
-      slug: "hotham",
+      slug: "bluestone",
       image: "/products/paving/Bluestone-thumb.webp",
     },
     {
       title: "Sandstone",
-      slug: "blue-ridge",
+      slug: "sandstone",
       image: "/products/paving/Sandstone-thumb.webp",
     },
     {
       title: "Limestone",
-      slug: "kakadu",
+      slug: "limestone",
       image: "/products/paving/Limestone-thumb.webp",
     },
     {
@@ -56,7 +56,7 @@ export const PRODUCT_CATEGORIES: Record<string, CategoryItem[]> = {
     },
     {
       title: "Travertine / Custom Cuts",
-      slug: "grange",
+      slug: "travertine-custom-cuts",
       image: "/products/paving/Travertine-thumb.webp",
     },
   ],

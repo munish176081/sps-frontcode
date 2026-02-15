@@ -17,7 +17,7 @@ export default function WallingPage() {
 
           {/* Walling Card */}
           <div className="row align-items-center mb-5">
-            <div className="col-lg-6 col-md-7">
+            <div className="col-lg-6 col-md-9">
               <Image
                 src="/products/walling-banner-pic.webp"
                 alt="Walling"

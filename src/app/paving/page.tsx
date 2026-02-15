@@ -2,8 +2,7 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import StoneFeatureSection from "../../components/categories/_components/StoneFeatureSection";
 import FaqSection from "@/components/ui/FaqSection"; 
-import Link from "next/link"; 
-import WallingPhotos from "../../components/categories/_components/wallling-photos";   
+import Link from "next/link";  
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
 import { PRODUCT_CATEGORIES } from "@/data/product";
 import '../walling/style.scss';
@@ -18,7 +17,7 @@ export default function ProductLanding() {
 
           {/* Paving Card */}
           <div className="row align-items-center mb-5">
-            <div className="col-lg-6 col-md-7">
+            <div className="col-lg-6 col-md-9">
               <Image
                 src="/products/paving/paving-banner.webp"
                 alt="Walling"

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import StoneFeatureSection from "../../components/categories/_components/StoneFeatureSection";
 import FaqSection from "@/components/ui/FaqSection"; 
-import WallingPhotos from "../../components/categories/_components/wallling-photos"; 
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
 import { PRODUCT_CATEGORIES } from "@/data/product";
 import '../walling/style.scss';
@@ -18,7 +17,7 @@ export default function ProductLanding() {
 
           {/* Walling Card */}
           <div className="row align-items-center mb-5">
-            <div className="col-lg-6 col-md-7">
+            <div className="col-lg-6 col-md-9">
               <Image
                 src="/products/brick/brick-banner.webp"
                 alt="Walling"

@@ -3,6 +3,8 @@
 @use "@/styles/flexbox" as *; 
 @use "@/styles/components/button" as *; 
 
+
+
 html, body {
   -webkit-font-smoothing: antialiased;   
   -moz-osx-font-smoothing: grayscale;  
@@ -15,6 +17,7 @@ body {
   font-weight: 400;
   font-family: var(--font-zt-nature), sans-serif;
   letter-spacing: 0px;
+  scroll-margin-top: 200px;
 }
 a {
   color: $black;

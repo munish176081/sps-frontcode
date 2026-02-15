@@ -21,7 +21,7 @@ export default function CategoriesGrid({ category, items }: Props) {
                 href={`/product/${item.slug}`}
                 className="d-block"
               >
-                <h3 className="h5 mb-4 d-inline-block collection-title">
+                <h3 className="h5 mb-md-4 mb-3 d-inline-block collection-title">
                     {item.title}
                   </h3> 
                 <div className="collection_pic">

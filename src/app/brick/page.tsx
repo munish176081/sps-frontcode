@@ -131,7 +131,6 @@ export default function ProductLanding() {
       <section className="py-5 paving-collections">
         <div className="container">
 
-          {/* Top Row */}
           <div className="row align-items-end mb-4">
             <div className="col-lg-8">
               <small className="badge-text badge-primary d-block mb-4">Collections</small>
@@ -188,7 +187,7 @@ export default function ProductLanding() {
 
             <div className="col-lg-4 d-flex flex-column align-items-start gap-3">
               <h3 className="h3 mb-3">Clayburn Brick</h3>
-              <Link href="#" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
+              <Link href="/products/clayburn-bricks" className="btn-circle rounded-circle d-flex align-items-center justify-content-center">
                 <svg width="14" height="31" viewBox="0 0 14 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.5 23.6108L6.94444 29.1664L1.38889 23.6108" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M6.94434 1.38867L6.94433 29.1665" stroke="black" strokeWidth="2.77778" strokeLinecap="round" strokeLinejoin="round" />
@@ -203,9 +202,7 @@ export default function ProductLanding() {
             </div>
 
           </div>
-
         </div>
-
       </section>
 
       <hr className="py-0 m-0" />
@@ -232,7 +229,6 @@ export default function ProductLanding() {
             </div>
 
           </div>
-
         </div>
       </section>
       
@@ -260,14 +256,12 @@ export default function ProductLanding() {
             </div>
 
           </div>
-
         </div>
       </section>
 
       <hr className="py-0 m-0" />
 
       <StoneFeatureSection />
-
       <FaqSection />
 
     </>

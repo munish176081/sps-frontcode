@@ -127,7 +127,6 @@ export default function ProductLanding() {
               <p className="text-small">Industry standard stone supply Sustainably sourced materials Low VOC impact</p>
             </div>
 
-            {/* Suitable For */}
             <div className="col">
               <h3 className="text-uppercase text-muted text-small mb-4">
                 Suitable For

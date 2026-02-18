@@ -234,6 +234,7 @@ export default function ProductLanding() {
       </section>
 
       <StoneFeatureSection />
+      
       <FaqSection />
 
     </>

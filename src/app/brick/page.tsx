@@ -262,6 +262,7 @@ export default function ProductLanding() {
       <hr className="py-0 m-0" />
 
       <StoneFeatureSection />
+      
       <FaqSection />
 
     </>

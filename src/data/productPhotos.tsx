@@ -12,9 +12,9 @@ export const PRODUCT_PHOTOS = {
     "/products/paving/paving-pic4.webp",
   ],
   brick: [
-    "/products/paving/brick-pic1.webp",
-    "/products/paving/brick-pic2.webp",
-    "/products/paving/brick-pic3.webp",
-    "/products/paving/brick-pic4.webp",
+    "/products/brick/brick-pic1.webp",
+    "/products/brick/brick-pic2.webp",
+    "/products/brick/brick-pic3.webp",
+    "/products/brick/brick-pic4.webp",
   ],
 };

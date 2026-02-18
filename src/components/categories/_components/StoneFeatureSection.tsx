@@ -41,10 +41,10 @@ export default function StoneFeatureSection() {
     <section className="py-5 stone-feature">
       <div className="container">
         {/* HEADER */}
-        <div className="row align-items-end mb-4">
+        <div className="row align-items-end mb-4 pb-2">
           <div className="col-lg-8">
             <small className="text-muted d-block mb-2">Explore More</small>
-            <h2 className="h3 mb-0">
+            <h2 className="h2 mb-0">
               Decorative Natural Stone Walling, <br />
               Crafted For Architectural Impact.
             </h2>
@@ -61,9 +61,9 @@ export default function StoneFeatureSection() {
 
         <hr />
 
-        {/* CONTENT */}
+        {/* Content */}
         <div className="row g-4 mt-0">
-          {/* LEFT IMAGE */}
+          {/* Left Image */}
           <div className="col-lg-6">
             <div className="feature-image">
               <Image
@@ -78,7 +78,7 @@ export default function StoneFeatureSection() {
             </div>
           </div>
 
-          {/* RIGHT ACCORDION (STICKY) */}
+          {/* Right Accordin Sticky */}
           <div className="col-lg-6 py-3">
             <div className="sticky-top" style={{ top: "120px" }}>
               {FEATURES.map((item) => {
@@ -96,7 +96,7 @@ export default function StoneFeatureSection() {
                       <span className="icon">{isOpen ? "–" : "+"}</span>
                     </button>
 
-                    {/* SMOOTH COLLAPSING BODY */}
+                    {/* Collapse Body */}
                     <div
                       className="accordion-body-wrapper"
                       style={{

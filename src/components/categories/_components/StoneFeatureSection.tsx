@@ -1,41 +1,27 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import './stone.scss';
+import { useModal } from "@/components/modals/ModalProvider";
+import { formSchemas } from "@/components/modals/formSchemas";
 
-const FEATURES = [
-  {
-    id: 1,
-    title: "Craft + Texture",
-    content:
-      "From linear and free-form profiles to ashlar patterns and bespoke cuts, collaborate with us to create a walling solution that reflects your vision and elevates every surface it touches.",
-    image: "/products/walling/Craft-texture.webp",
-  },
-  {
-    id: 2,
-    title: "Sustainability + us",
-    content:
-      "We’re committed to creating high-performance hardscaping products for modern urban living that have minimal impact on our environment.",
-    image: "/products/walling/Craft-texture1.webp",
-    cta: {
-      label: "About our sustainable practices",
-      href: "/sustainability",
-    },
-  },
-  {
-    id: 3,
-    title: "Request samples + pricing",
-    content:
-      "Order samples or request pricing details tailored to your project requirements.",
-    image: "/products/walling/Craft-texture.webp",
-  },
-];
+type Brochures = {
+  project_book?: {
+    image: string;
+    file: string;
+  };
+  range?: {
+    image: string;
+    file: string;
+  };
+};
 
-export default function StoneFeatureSection() {
-  const [activeId, setActiveId] = useState<number>(1);
-  const active = FEATURES.find(f => f.id === activeId)!;
+type Props = {
+  brochures?: Brochures;
+};
+
+export default function StoneFeatureSection({ brochures }: Props) {
+  const { openModal } = useModal();
 
   return (
     <section className="py-5 stone-feature">
@@ -49,79 +35,64 @@ export default function StoneFeatureSection() {
               Crafted For Architectural Impact.
             </h2>
           </div>
-          <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
-            <Button
-              label="Download brochure"
-              href="/brochure"
-              variant="black"
-              rounded
-            />
-          </div>
         </div>
 
         <hr />
 
-        {/* Content */}
-        <div className="row g-4 mt-0">
-          {/* Left Image */}
-          <div className="col-lg-6">
-            <div className="feature-image">
-              <Image
-                key={active.image}
-                src={active.image}
-                alt={active.title}
-                width={900}
-                height={700}
-                className="img-fluid feature-image"
-                priority
-              />
+        <div className="row g-4 mt-4">
+          {/* PROJECT BOOK */}
+          {brochures?.project_book && (
+            <div className="col-md-6">
+              <div className="brochure-card text-center">
+                <Image
+                  src={brochures.project_book.image}
+                  alt="Project Book"
+                  width={600}
+                  height={500}
+                  className="img-fluid mb-3 rounded-3"
+                />
+
+                <Button
+                  label="Download"
+                  variant="black"
+                  rounded
+                  onClick={() =>
+                    openModal({
+                      schema: formSchemas.samples,
+                      brochure: "project_book",
+                    })
+                  }
+                />
+              </div>
             </div>
-          </div>
+          )}
 
-          {/* Right Accordin Sticky */}
-          <div className="col-lg-6 py-3">
-            <div className="sticky-top" style={{ top: "120px" }}>
-              {FEATURES.map((item) => {
-                 const isOpen = item.id === activeId;
+          {/* PRODUCT RANGE */}
+          {brochures?.range && (
+            <div className="col-md-6">
+              <div className="brochure-card text-center">
+                <Image
+                  src={brochures.range.image}
+                  alt="Product Range"
+                  width={600}
+                  height={500}
+                  className="img-fluid mb-3 rounded-3"
+                />
 
-                return (
-                  <div key={item.id} 
-                    className={`accordion-item ${isOpen ? "active" : ""}`}
-                  >
-                    <button
-                      className="accordion-header w-100 text-start d-flex justify-content-between align-items-center bg-transparent border-0 px-0 py-3"
-                      onClick={() => setActiveId(item.id)}
-                    >
-                      <span className="h3 fw-normal mb-0">{item.title}</span>
-                      <span className="icon">{isOpen ? "–" : "+"}</span>
-                    </button>
-
-                    {/* Collapse Body */}
-                    <div
-                      className="accordion-body-wrapper"
-                      style={{
-                        maxHeight: isOpen ? "250px" : "0px",
-                        opacity: isOpen ? 1 : 0,
-                      }}
-                    >
-                      <div className="accordion-body">
-                        <p>{item.content}</p>
-
-                        {item.id === 2 && (
-                          <Button
-                            label="About our sustainable practices"
-                            href="/sustainability"
-                            variant="black"
-                            rounded
-                          />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+                <Button
+                  label="Download"
+                  variant="black"
+                  rounded
+                  onClick={() =>
+                    openModal({
+                      schema: formSchemas.samples,
+                      brochure: "range",
+                    })
+                  }
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

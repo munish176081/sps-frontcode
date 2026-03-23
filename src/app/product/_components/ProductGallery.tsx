@@ -31,8 +31,8 @@ export default function ProductGallery({ images }: Props) {
                             src={src}
                             alt={`Product image ${i + 1}`}
                             width={1200}
-                            height={800}
-                            className="w-100 h-auto"
+                            height={600}
+                            className="w-100 h-auto object-cover"
                             priority={i === 0}
                         />
                     </SwiperSlide>

@@ -9,6 +9,8 @@ type ButtonProps = {
   showIcon?: boolean;
   className?: string;
   onClick?: () => void;
+  loading?: boolean;
+  disabled?: boolean;
 };
 
 export default function Button({
@@ -20,6 +22,8 @@ export default function Button({
   showIcon = true,
   className = "",
   onClick,
+  loading = false,
+  disabled = false,
 }: ButtonProps) {
   const baseClasses = [
     "btn",
@@ -58,6 +62,7 @@ export default function Button({
   if (href) {
     return (
       <Link href={href} className={classes}>
+        {loading && <span className="spinner" />}
         {label}
         {ArrowIcon}
       </Link>
@@ -65,7 +70,8 @@ export default function Button({
   }
 
   return (
-    <button className={classes} onClick={onClick}>
+    <button className={classes} onClick={onClick} disabled={disabled || loading}>
+      {loading && <span className="spinner" />}
       {label}
       {ArrowIcon}
     </button>

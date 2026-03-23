@@ -1,3 +1,6 @@
+"use client";
+
+import React from "react";
 import Button from "@/components/ui/Button";
 import StoneFeatureSection from "../_components/StoneFeatureSection";
 import FaqSection from "@/components/ui/FaqSection";
@@ -5,22 +8,66 @@ import BackToPage from "@/components/ui/BackToPage";
 import { formatSlug } from "@/lib/utils";
 import ProductGallery from "../_components/ProductGallery";
 import "../style.scss";
+import { useProduct } from "@/hooks/useProducts";
+import dynamic from "next/dynamic";
+import { useParams, useRouter } from "next/navigation";
+import type { SingleValue } from "react-select";
 
-const PRODUCT_IMAGES = [
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-  "/products/walling-banner-pic.webp",
-];
+export default function ProductDetails() {
+  const params = useParams();
 
-export default async function ProductDetails({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
+  const Select = dynamic(() => import("react-select"), { ssr: false });
+
+  const router = useRouter();
+
+  const slug = params.slug as string;
+  const { data: product, isLoading, isError } = useProduct(slug);
+
+  if (isLoading) {
+    return (
+      <section className="py-5 text-center">
+        <div className="container">
+          <h3>Loading product details...</h3>
+        </div>
+      </section>
+    );
+  }
+  if (isError) {
+    return (
+      <section className="py-5 text-center">
+        <div className="container">
+          <h3>Something went wrong</h3>
+          <p>Unable to load product details right now.</p>
+          <BackToPage />
+        </div>
+      </section>
+    );
+  }
+
+  console.log("Product details:", product);
+
+  type Option = {
+    value: string;
+    label: string;
+  };
+
+  const options: Option[] =
+    product?.category_products?.map((item) => ({
+      value: item.slug,
+      label: item.title,
+    })) ?? [];
+
+  const groupedSpecs = product?.sizes?.reduce(
+    (acc: Record<string, string[]>, item) => {
+      if (!acc[item.section]) {
+        acc[item.section] = [];
+      }
+      acc[item.section].push(item.value);
+      return acc;
+    },
+    {},
+  );
+
   return (
     <>
       <section className="page-header mt-0 mt-md-5 mb-4 pt-4 pt-md-5 pb-md-4">
@@ -50,124 +97,82 @@ export default async function ProductDetails({
           {/* Dropdown */}
           <div className="row mb-4">
             <div className="col-md-4 col-lg-3">
-              <select className="form-select rounded-0 border">
-                <option>Honed Bluestone</option>
-                <option>Flamed Bluestone</option>
-                <option>Sawn Bluestone</option>
-              </select>
+              <Select
+                options={options}
+                placeholder="Search other products..."
+                onChange={(newValue) => {
+                  const option = newValue as SingleValue<Option>;
+
+                  if (option?.value) {
+                    router.push(`/product/${option.value}`);
+                  }
+                }}
+                className="react-select"
+                classNamePrefix="select"
+              />
             </div>
           </div>
 
+          {/* Gallery */}
+          <ProductGallery images={product?.gallery || []} />
+          
+          <hr />
+          
           {/* Content Row */}
           <div className="row">
-            <div className="col-lg-8 pe-md-5">
-              <div className="h3 fw-normal">
-                <p>
-                  Honed Bluestone delivers a smooth, elegant finish with
-                  consistent blue-grey tones that suit both contemporary and
-                  traditional spaces.
-                </p>
+            <div className="col-lg-12 pe-md-5">
+              <div
+                className="h3 fw-normal"
+                dangerouslySetInnerHTML={{
+                  __html: product?.description || "",
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <p>
-                  Its refined appearance makes it ideal for interiors, alfresco
-                  areas, courtyards, and poolside designs where a softer texture
-                  is preferred without sacrificing durability.
-                </p>
+      <hr />
+
+      {/* SIZES */}
+      {groupedSpecs &&
+        Object.entries(groupedSpecs).map(([section, values], index, array) => (
+          <React.Fragment key={section}>
+            <section className="py-4 py-md-5 sizes-section">
+              <div className="container">
+                <div className="row align-items-start">
+                  {/* LEFT TITLE - Uses the Section Name from DB */}
+                  <div className="col-md-6 col-lg-5">
+                    <h3 className="h2 mb-0">
+                      {section === "Random sizes" ? (
+                        <>
+                          Available Sizes for{" "}
+                          <br className="d-none d-md-block" /> {product?.title}
+                        </>
+                      ) : (
+                        section
+                      )}
+                    </h3>
+                  </div>
+
+                  {/* RIGHT LIST - Loops the values for this section */}
+                  <div className="col-md-6 col-lg-7 text-md-end">
+                    <ul className="sizes-list ms-auto mb-0 d-inline-block text-md-start">
+                      {values.map((val, idx) => (
+                        <li key={idx}>{val}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            {/* RIGHT SMALL TEXT */}
-            <div className="col-lg-4 mt-4 mt-lg-0">
-              <p className="small text-muted">
-                This versatile stone brings a sleek, architectural feel to both
-                indoor floors and outdoor surfaces, offering a polished
-                aesthetic that enhances the flow between indoor and outdoor
-                environments.
-              </p>
-            </div>
-          </div>
-
-          <ProductGallery images={PRODUCT_IMAGES} />
-        </div>
-      </section>
-
-      <hr />
-
-      <section className="py-4 py-md-5 sizes-section">
-        <div className="container">
-          <div className="row align-items-start">
-            {/* LEFT TITLE */}
-            <div className="col-md-6 col-lg-5">
-              <h3 className="h2 mb-0">
-                Available Sizes for <br className="d-none d-md-block" />
-                Honed Bluestone
-              </h3>
-            </div>
-
-            {/* RIGHT LIST */}
-            <div className="col-md-6 col-lg-7 text-md-end">
-              <ul className="sizes-list ms-auto mb-0 d-inline-block text-md-start">
-                <li>800 × 400 × 20 mm</li>
-                <li>800 × 400 × 30 mm</li>
-                <li>600 × 300 × 20 mm</li>
-                <li>Honed crazy paving: 20 mm thick</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-
-      <section className="py-4 py-md-5 sizes-section">
-        <div className="container">
-          <div className="row align-items-start">
-            {/* LEFT TITLE */}
-            <div className="col-md-6 col-lg-5">
-              <h3 className="h2 mb-0">Coping (bullnose)</h3>
-            </div>
-
-            {/* RIGHT LIST */}
-            <div className="col-md-6 col-lg-7 text-md-end">
-              <ul className="sizes-list ms-auto mb-0 d-inline-block text-md-start">
-                <li>600 × 300 × 30 mm</li>
-                <li>800 × 400 × 30 mm</li>
-                <li>1000 × 500 × 30 mm</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-
-      <section className="py-4 py-md-5 sizes-section">
-        <div className="container">
-          <div className="row align-items-start">
-            {/* LEFT TITLE */}
-            <div className="col-md-6 col-lg-5">
-              <h3 className="h2 mb-0">Coping (drop down):</h3>
-            </div>
-
-            {/* RIGHT LIST */}
-            <div className="col-md-6 col-lg-7 text-md-end">
-              <ul className="sizes-list ms-auto mb-0 d-inline-block text-md-start">
-                <li>600 × 350 × 20/40 mm</li>
-                <li>600 × 350 × 30/80 mm</li>
-                <li>800 × 400 × 20/50 mm</li>
-                <li>800 × 400 × 30/80 mm</li>
-                <li>1000 × 250 × 30/60 mm</li>
-                <li>1000 × 350 × 30/80 mm</li>
-                <li>1005 × 500 × 30/80 mm</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
+            <hr />
+          </React.Fragment>
+        ))}
 
       <StoneFeatureSection />
 
-      <FaqSection />
+      <FaqSection items={product?.faqs || []} />
     </>
   );
 }

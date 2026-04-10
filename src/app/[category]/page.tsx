@@ -7,20 +7,15 @@ import StoneFeatureSection from "../../components/categories/_components/StoneFe
 import FaqSection from "@/components/ui/FaqSection";
 import ProductsGrid from "@/components/categories/ProductsGrid";
 import ProductPhotos from "@/components/products/ProductPhotos";
-import { PRODUCT_PHOTOS } from "@/data/productPhotos";
 import { useCategory } from "@/hooks/useCategory";
 import { categoryTitle } from "@/lib/utils";
-import GridCardSkeleton from "./components/GridCardSkeleton";
+import GridCardSkeleton from "../../components/ui/GridCardSkeleton";
 import "./style.scss";
-import { useModal } from "@/components/modals/ModalProvider";
-import { formSchemas } from "@/components/modals/formSchemas";
 
 export default function CategoryPage() {
   const params = useParams();
   const slug = params.category as string;
   console.log("Category:", slug);
-
-  const { openModal } = useModal();
 
   const { data: category, isLoading, error } = useCategory(slug);
 
@@ -98,30 +93,6 @@ export default function CategoryPage() {
                 />
               </h2>
             </div>
-
-            <Button
-              onClick={() =>
-                openModal({
-                  schema: formSchemas.samples,
-                  brochure: "project_book",
-                })
-              }
-              label="Request Free Samples"
-              variant="black"
-              rounded
-            />
-
-            <Button
-              onClick={() =>
-                openModal({
-                  schema: formSchemas.samples,
-                  brochure: "project_range",
-                })
-              }
-              label="Request Free range"
-              variant="black"
-              rounded
-            />
 
             <div className="col-lg-4">
               <p>{category?.subtitle ?? ""}</p>

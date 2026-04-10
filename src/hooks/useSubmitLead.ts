@@ -3,6 +3,6 @@ import { submitLead } from "@/api/leads";
 
 export function useSubmitLead() {
   return useMutation({
-    mutationFn: submitLead,
+    mutationFn: (data: FormData) => submitLead(data),
   });
 }

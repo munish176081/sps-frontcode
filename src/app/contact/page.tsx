@@ -4,6 +4,7 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import LeadForm from "@/components/forms/LeadForm";
 import "./style.scss";
+import { formSchemas } from "@/components/modals/formSchemas";
 
 export default function ContactPage() {
   return (
@@ -140,7 +141,7 @@ export default function ContactPage() {
 
             {/* FORM */}
             <div className="col-lg-7">
-              <LeadForm formType="contact" />
+              <LeadForm schema={formSchemas.contact} />
             </div>
           </div>
         </div>

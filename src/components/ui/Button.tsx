@@ -2,6 +2,7 @@ import Link from "next/link";
 
 type ButtonProps = {
   label: string;
+  type?: "button" | "submit";
   href?: string;
   variant?: "white" | "black" | "outline";
   size?: "sm" | "md" | "lg" | "full";
@@ -16,6 +17,7 @@ type ButtonProps = {
 export default function Button({
   label,
   href,
+  type = "submit",
   variant = "white",
   size = "md",
   rounded = false,
@@ -70,7 +72,7 @@ export default function Button({
   }
 
   return (
-    <button className={classes} onClick={onClick} disabled={disabled || loading}>
+    <button type={type} className={classes} onClick={onClick} disabled={disabled || loading}>
       {loading && <span className="spinner" />}
       {label}
       {ArrowIcon}

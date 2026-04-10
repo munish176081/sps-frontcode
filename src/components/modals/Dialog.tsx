@@ -7,7 +7,14 @@ type Props = {
   onClose: () => void;
   title?: string;
   description?: string;
+  size?: "sm" | "md" | "lg";
   children: React.ReactNode;
+};
+
+const sizeClass = {
+  sm: "600px",
+  md: "800px",
+  lg: "1100px",
 };
 
 export default function GlobalDialog({
@@ -15,6 +22,7 @@ export default function GlobalDialog({
   onClose,
   title,
   description,
+  size = "md",
   children,
 }: Props) {
   return (
@@ -22,11 +30,15 @@ export default function GlobalDialog({
       <div className="modal-overlay" />
 
       <div className="modal-container">
-        <DialogPanel className="modal-box">
-
+        <DialogPanel
+          className="modal-box"
+          style={{
+            maxWidth: sizeClass[size] || "800px",
+            width: "100%",
+          }}
+        >
           {/* HEADER */}
           <div className="modal-header">
-
             <div>
               {title && <h3 className="modal-title">{title}</h3>}
               {description && (
@@ -34,20 +46,13 @@ export default function GlobalDialog({
               )}
             </div>
 
-            <button
-              onClick={onClose}
-              className="modal-close"
-            >
+            <button onClick={onClose} className="modal-close">
               ✕
             </button>
-
           </div>
 
           {/* CONTENT */}
-          <div className="modal-body">
-            {children}
-          </div>
-
+          <div className="modal-body">{children}</div>
         </DialogPanel>
       </div>
     </Dialog>

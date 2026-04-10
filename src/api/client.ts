@@ -4,10 +4,12 @@ export async function apiClient<T>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<T> {
+  const isFormData = options.body instanceof FormData;
 
   const res = await fetch(`${config.apiUrl}${endpoint}`, {
     headers: {
-      "Content-Type": "application/json",
+      ...(isFormData ? {} : { "Content-Type": "application/json" }),
+      ...options.headers,
     },
     ...options,
   });

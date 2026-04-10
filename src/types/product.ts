@@ -40,3 +40,27 @@ export type ProductSingleResponse = {
   success: boolean;
   data: ProductDetail;
 };
+
+export type StoneCategory = {
+  id: number;
+  name: string;
+  slug: string;
+};
+
+export type StoneProduct = {
+  id: number;
+  title: string;
+  slug: string;
+  category_id: number | null;
+  main_image: string;
+};
+
+export type StoneData = {
+  categories: StoneCategory[];
+  products: StoneProduct[];
+};
+
+export type StoneDataResponse = {
+  success: boolean;
+  data: StoneData;
+};

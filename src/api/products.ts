@@ -3,6 +3,8 @@ import {
   ProductDetail,
   ProductResponse,
   ProductSingleResponse,
+  StoneData,
+  StoneDataResponse,
 } from "@/types/product";
 
 export async function getProducts(category?: string): Promise<ProductDetail[]> {
@@ -13,5 +15,10 @@ export async function getProducts(category?: string): Promise<ProductDetail[]> {
 
 export async function getProduct(slug: string): Promise<ProductDetail> {
   const res = await apiClient<ProductSingleResponse>(`/products/${slug}`);
+  return res.data ?? [];
+}
+
+export async function getStoneData(): Promise<StoneData> {
+  const res = await apiClient<StoneDataResponse>("/stone-data");
   return res.data ?? [];
 }

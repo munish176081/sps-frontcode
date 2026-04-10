@@ -58,7 +58,7 @@ export default function StoneFeatureSection({ brochures }: Props) {
                   rounded
                   onClick={() =>
                     openModal({
-                      schema: formSchemas.samples,
+                      schema: formSchemas.brochures,
                       brochure: "project_book",
                     })
                   }
@@ -85,7 +85,7 @@ export default function StoneFeatureSection({ brochures }: Props) {
                   rounded
                   onClick={() =>
                     openModal({
-                      schema: formSchemas.samples,
+                      schema: formSchemas.brochures,
                       brochure: "range",
                     })
                   }

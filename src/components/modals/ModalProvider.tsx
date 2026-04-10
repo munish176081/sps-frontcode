@@ -42,6 +42,7 @@ export default function ModalProvider({ children }: any) {
         onClose={closeModal}
         title={modal?.schema?.title ?? ""}
         description={modal?.schema?.description}
+        size={modal?.schema?.size || "md"}
       >
         {modal?.schema && (
           <DynamicForm

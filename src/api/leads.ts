@@ -1,9 +1,9 @@
-import { LeadPayload } from "@/types/lead";
 import { apiClient } from "./client";
 
-export function submitLead(data: LeadPayload) {
+
+export function submitLead(data: FormData) {
   return apiClient("/leads", {
     method: "POST",
-    body: JSON.stringify(data),
+    body: data,
   });
 }

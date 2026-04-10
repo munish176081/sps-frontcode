@@ -9,6 +9,7 @@ import TopLoader from "@/components/ui/TopLoader";
 import QueryProvider from "@/providers/QueryProvider";
 import { Toaster } from "react-hot-toast";
 import ModalProvider from "@/components/modals/ModalProvider";
+import TopAnnouncementBar from "@/components/ui/TopAnnouncementBar";
 
 const ztNature = localFont({
   src: [
@@ -64,6 +65,7 @@ export default function RootLayout({
         <QueryProvider>
           <ModalProvider>
             <TopLoader />
+            <TopAnnouncementBar />
             <Header />
             {children}
             <Footer />

@@ -1,22 +1,18 @@
-export const hearAboutOptions = [
-  { label: "Google Search", id: "Google Search" },
-  { label: "Google Ad", id: "Google Ad" },
-  { label: "Facebook Post", id: "Facebook Post" },
-  { label: "Instagram Post", id: "Instagram Post" },
-  { label: "Facebook Ad", id: "Facebook Ad" },
-  { label: "Instagram Ad", id: "Instagram Ad" },
-  { label: "TikTok Post", id: "TikTok Post" },
-  { label: "Pinterest Post", id: "Pinterest Post" },
-  { label: "Blog Article", id: "Blog Article" },
-];
+import {
+  nameField,
+  emailField,
+  phoneField,
+  termsField,
+  hearAboutField,
+} from "../forms/commonFields";
 
 export const formSchemas = {
   contact: {
     type: "contact",
     fields: [
-      { name: "name", type: "text", label: "Name", required: true },
-      { name: "email", type: "email", label: "Email", required: true },
-      { name: "phone", type: "phone", label: "Phone", required: true },
+      { ...nameField },
+      { ...emailField },
+      { ...phoneField },
       {
         name: "product_id",
         type: "select",
@@ -25,15 +21,7 @@ export const formSchemas = {
         optionsFrom: "products",
       },
       { name: "message", type: "textarea", label: "Message", required: true },
-      {
-        name: "terms",
-        type: "checkbox",
-        label: "I agree to the",
-        linkText: "Privacy Policy",
-        link: "/privacy-policy",
-        required: true,
-        hideLabel: true,
-      },
+      { ...termsField },
     ],
   },
   samples: {
@@ -42,36 +30,9 @@ export const formSchemas = {
     description: "Fill your details and we will send samples to you.",
     size: "md",
     fields: [
-      {
-        name: "name",
-        type: "text",
-        label: "Name",
-        required: true,
-        col: {
-          md: 6,
-          xs: 12,
-        },
-      },
-      {
-        name: "email",
-        type: "email",
-        label: "Email",
-        required: true,
-        col: {
-          md: 6,
-          xs: 12,
-        },
-      },
-      {
-        name: "phone",
-        type: "phone",
-        label: "Phone",
-        required: true,
-        col: {
-          md: 6,
-          xs: 12,
-        },
-      },
+      { ...nameField, col: { md: 6, xs: 12 } },
+      { ...emailField, col: { md: 6, xs: 12 } },
+      { ...phoneField, col: { md: 6, xs: 12 } },
       {
         name: "address",
         type: "text",
@@ -132,17 +93,7 @@ export const formSchemas = {
         },
         optionsFrom: "categories",
       },
-      {
-        name: "how_did_you_hear",
-        type: "select",
-        label: "How did you hear of us?",
-        col: {
-          md: 6,
-          xs: 12,
-        },
-        options: hearAboutOptions,
-      },
-
+      { ...hearAboutField , col: { md: 6, xs: 12 } },
       {
         name: "stones",
         type: "product-grid",
@@ -153,15 +104,7 @@ export const formSchemas = {
         required: true,
         hideLabel: true,
       },
-      {
-        name: "terms",
-        type: "checkbox",
-        label: "I agree to the",
-        linkText: "Privacy Policy",
-        link: "/privacy-policy",
-        required: true,
-        hideLabel: true,
-      },
+      termsField,
     ],
   },
 
@@ -171,31 +114,11 @@ export const formSchemas = {
     description: "Enter your details to download the brochure.",
     size: "sm",
     fields: [
-      {
-        name: "name",
-        type: "text",
-        placeholder: "Name",
-        required: true,
-      },
-      {
-        name: "email",
-        type: "email",
-        placeholder: "Email",
-        required: true,
-      },
-      {
-        name: "phone",
-        type: "phone",
-        placeholder: "Phone",
-        required: true,
-      },
-      {
-        name: "how_did_you_hear",
-        label: "How did you hear about us?",
-        type: "select",
-        required: true,
-        options: hearAboutOptions,
-      },
+      { ...nameField },
+      { ...emailField },
+      { ...phoneField },
+      hearAboutField,
+      termsField,
     ],
   },
 
@@ -209,23 +132,9 @@ export const formSchemas = {
       {
         title: "Your Details",
         fields: [
-          { name: "name", type: "text", label: "Name", required: true, col: 6 },
-          {
-            name: "email",
-            type: "email",
-            label: "Email",
-            required: true,
-            col: 6,
-          },
-          {
-            name: "phone",
-            type: "phone",
-            label: "Phone",
-            placeholder: "Phone",
-            required: true,
-            col: 6,
-            hideLabel: false,
-          },
+          { ...nameField, col: { md: 6, xs: 12 } },
+          { ...emailField, col: { md: 6, xs: 12 } },
+          { ...phoneField, col: { md: 6, xs: 12 } },
           {
             name: "suburb",
             type: "text",
@@ -297,13 +206,7 @@ export const formSchemas = {
       {
         title: "Additional\nDetails",
         fields: [
-          {
-            name: "how_did_you_hear",
-            type: "select",
-            label: "How did you hear of us?",
-            options: hearAboutOptions,
-          },
-
+          hearAboutField,
           {
             name: "message",
             type: "textarea",
@@ -317,15 +220,7 @@ export const formSchemas = {
             type: "file",
             label: "Upload a photo of your spacess",
           },
-          {
-            name: "terms",
-            type: "checkbox",
-            label: "I agree to the",
-            linkText: "Privacy Policy",
-            link: "/privacy-policy",
-            required: true,
-            hideLabel: true,
-          },
+          termsField,
         ],
       },
     ],

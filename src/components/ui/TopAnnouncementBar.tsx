@@ -9,10 +9,10 @@ export default function TopAnnouncementBar() {
 
   return (
     <div className="top-announcement">
-      <div className="container d-flex align-items-center justify-content-between flex-wrap gap-3">
+      <div className="container d-flex align-items-center justify-content-center flex-wrap gap-3">
 
         <p className="announcement-text mb-0">
-          REGISTER YOUR INFORMATION FOR FREE STONE SAMPLES SENT EXPRESS TO YOU!
+          REGISTER YOUR INFORMATION FOR
         </p>
 
         <div className="d-flex gap-3">

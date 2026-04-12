@@ -1,8 +1,8 @@
-import Button from '@/components/ui/Button';
-import Link from 'next/link';
 import '../contact/style.scss';
 import './style.scss';
 import Image from 'next/image';
+import { formSchemas } from '@/components/modals/formSchemas';
+import LeadForm from '@/components/forms/LeadForm';
 
 export default function GetQuotePage() {
   return (
@@ -89,58 +89,7 @@ export default function GetQuotePage() {
 
             {/* FORM */}
             <div className="col-lg-7">
-              <form className="row g-4 contact-form">
-                <div className="col-12 mb-2">
-                  <label>Name</label>
-                  <div className="position-relative">
-                    <input type="text" className="form-control" placeholder="" />
-                  </div>
-                </div>
-
-                <div className="col-12 mb-2">
-                  <label>Email</label>
-                  <div className="position-relative">
-                    <input type="email" className="form-control" placeholder="" />
-                  </div>
-                </div>
-
-                <div className="col-12 mb-2">
-                  <label>Phone</label>
-                  <div className="position-relative">
-                    <input type="tel" className="form-control" placeholder="" />
-                  </div>
-                </div>
-
-                <div className="col-12 mb-2">
-                  <label>Write your message</label>
-                  <div className="position-relative">
-                    <textarea
-                      className="form-control"
-                      rows={4}
-                      placeholder=""
-                    />
-                  </div>
-                </div>
-
-                <div className="col-12 d-flex align-items-center gap-2 mb-3">
-                  <div className="checkbox-container">
-                    <label className="checkbox">
-                      <input className="checkbox__trigger visuallyhidden" type="checkbox" />
-                      <span className="checkbox__symbol">
-                        <svg aria-hidden="true" className="icon-checkbox" width="28px" height="28px" viewBox="0 0 28 28" version="1">
-                          <path d="M4 14l8 7L24 7"></path>
-                        </svg>
-                      </span>
-                      <span className="checkbox__textwrapper">I agree to the <Link href="#">Privacy Policy</Link></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div className="col-12">
-                  <Button rounded size="md" label="Submit" variant="black" />
-                </div>
-
-              </form>
+               <LeadForm schema={formSchemas.contact} />
             </div>
 
           </div>

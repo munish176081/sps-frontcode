@@ -16,7 +16,7 @@ export const leadSchema = z.object({
     .transform((val) => val.replace(/\D/g, ""))
     .refine(
       (val) => /^[2-478]\d{8}$/.test(val),
-      "Enter valid Australian phone number",
+      "Enter valid phone number",
     ),
 
   product_id: z.coerce.number().min(1, "Please select product").optional(),
